@@ -1,0 +1,167 @@
+body {
+    background-color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu {
+    width: 1200px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+/* Создаём грид контейнер для шапки с навигацией */
+.navigation {
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 3fr 1fr auto;
+    grid-auto-rows: minmax(66px, auto);
+    width: 1060px;
+    margin: 0 auto;
+    position: relative;
+} 
+
+.logo-link {
+    margin-right: 30px;
+    position: absolute;
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    font-family: PT Sans, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.navigation-link:hover {
+    color: #756257;
+}
+/* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
+.navigation-link:active {
+    color: #000000;
+    border-bottom: 2px solid #756257;
+    padding: 22px 0;
+}
+/* По стайлгайду не вполне понял что означает состояние "нажатие".
+Почитал это как посещённая ссылка, поэтому применил эти стили к visited  */
+.navigation-link:visited {
+    color: #756257;
+    opacity: 0.3;
+}
+
+.navigation-items {
+    margin-right: 34px;
+}
+
+.navigation-items:last-child {
+    margin-right: 0px;
+}
+
+.navigation-list:first-of-type {
+    padding: 20px 17px;
+    margin: auto 0 auto 169px;
+}
+
+.navigation-button {
+    width: 150px;
+    height: 45px;
+}
+/* Сркываем невидимые спаны */
+.visyally-hidden {
+    display: none;
+}
+
+.choose-date-button {
+    align-self: center;
+}
+
+.choose-date-button button {
+    width: 160px;
+    height: 37px;
+    background-color: #756257;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+}
+
+.navigation-user {
+    justify-self: end;
+    align-self: center;
+}
+
+.user-items {
+    margin-right: 24px;
+    position: relative;
+    line-height: 0;
+}
+
+.user-items:last-of-type {
+    margin-right: 20px;
+}
+/* Фон счётчика лайковк */
+.counter {
+    position: absolute;
+    top: -50%;
+    right: -70%;
+}
+/* значение счётчика лайков */
+.counter-value {
+    position: absolute; 
+    font-family: PT Sans, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    color: white;
+    top: -20%;
+    right: -35%;
+}
+
+.like-link {
+    text-decoration: none;
+}
+
+/* Первый экран. Слоган Седоны */
+
+.first-screen {
+    z-index: -1;
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 485px;
+    background: url('img/first-screen-bg.svg');
+}
+
+.first-screen img {
+    display: block;
+    margin: auto;
+}
+
+.first-screen img:first-child {
+    padding-top: 46px;
+    padding-bottom: 11px;
+}
+
+.first-screen img:nth-child(3) {
+    padding-top: 53px;
+}
+
+.first-screen img:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
