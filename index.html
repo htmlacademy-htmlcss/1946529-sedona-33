@@ -2,16 +2,53 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-    <span>Добавил тестовый тег спан для проверки работы с Гитхаб</span>
-    <p>И ещё один коммент для проверки</p>
-    
-<p>Ну и почему не работает?</p>
-<span>Алё гараж, почему не работаем?</span>
-<div><p>Вроде бы что то начало получаться...</p></div>
+    <!-- Шапка, главное меню, навигация -->
+    <header class="top-menu">
+      <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a class="navigation-link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-items">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-items">
+              <a class="navigation-link" href="#">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="user-items">
+              <a class="search-link" href="#">
+                <img class="search" src="img/search-icon.svg" alt="like">
+                <span class="visyally-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="user-items">
+                <a class="like-link" href="#">
+                  <img class="favorite" src="img/favorite.svg" alt="like">
+                  <img class="counter" src="img/like-accounter.svg" alt="">
+                  <span class="visyally-hidden">Добавить в избранное</span>
+                  <span class="counter-value">12</span>
+                  </a>
+            </li>
+          </ul>
+          <!-- Нужно ли кнопку помещать в форму или можно просто оставить только кнопку? -->
+          <form class="choose-date-button" action="">
+            <button>Хочу сюда!</button>
+          </form>
+          <a class="logo-link" href="https://htmlacademy.ru/"><img src="img/logo.svg" alt="Sedona"></a>
+      </nav>
+    </header>
+    <!-- Первый экран, Слоган Седона и фон -->
+    <header class="first-screen">
+      <img src="img/welcome.svg" alt="">
+      <img src="img/gorgeous.svg" alt="">
+      <img src="img/sedona.svg" alt="">
+      <img src="img/divider.svg" alt="">
+    </header>
   </body>
 </html>
