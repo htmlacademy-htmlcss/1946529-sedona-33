@@ -165,3 +165,347 @@ body {
     bottom: 0;
 }
 
+/* Раздел преимущества - заголовок */
+
+.wrapper h1,
+.wrapper h2,
+.wrapper span,
+.wrapper b {
+    margin: 0;
+    display: block;
+    font-family: PT Sans, sans-serif;
+    font-style: normal;
+    letter-spacing: 0em;
+}
+
+.advanages-header {
+    background-color: #ffffff;
+    width: 1200px;
+    height: 282px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.advanages-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 63px 0 23px 0;
+}
+
+.advanages-header span {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #333333;
+}
+
+/* Грид-контейнер со списком преимуществ */
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.advantages-list h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.advantages-list span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.advantages-list b {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.advantages-item h2 {
+    padding: 98px 0 25px 0;
+}
+
+.advantages-item span {
+    padding-top: 26px;
+}
+
+.advantages-item {
+    text-align: center;
+    width: 400px;
+    height: 384px;
+    color: #FFFFFF;
+}
+
+.first-advantages {
+    background-color: #83B3D3;
+}
+
+.first-advantages-img {
+    grid-column: 2/4;
+}
+
+/* Преимуществ , второй ряд */
+
+.advantage-with-icon {
+    text-align: center;
+    width: 400px;
+    height: 384px;
+}
+
+.advantage-with-icon img {
+    padding: 89px 0 23px 0;
+    margin: 0;
+}
+
+.advantage-with-icon h2 {
+    color: #000000;
+}
+
+.advantage-with-icon span {
+    padding-top: 20px;
+    color: #333333;
+}
+
+.advantages-houses {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-food {
+    background-color: #FFFFFF;
+}
+
+.advantages-souvenirs {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+/* Преимущества, третий ряд */
+
+.second-advantages-img {
+    grid-column: 1/3;
+}
+
+.second-advantages {
+    background-color: #83B3D3;
+}
+
+/* Преимущества, четвёртый ряд */
+
+.third-advantages,
+.fifth-advantages {
+    background: rgba(131, 179, 211, 0.12);
+    color: #000000;
+}
+
+.fourth-advantages {
+    background: rgba(131, 179, 211, 0.2);
+    color: #000000;
+}
+
+.third-advantages span,
+.fifth-advantages span,
+.fourth-advantages span,
+.third-advantages b,
+.fifth-advantages b,
+.fourth-advantages b {
+    color: #333333;
+}
+
+/* Блок "Заинтересовались?", сссылка на выбор даты поездки */
+
+.interesting {
+    width: 1200px;
+    height: 417px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.interesting h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000000;
+    padding: 91px 0 32px 0;
+}
+
+.interesting span {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+}
+
+.search-hotels {
+    text-transform: uppercase;
+    font-family: PT Sans, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #756257;
+    padding: 15px 150px;
+    border-radius: 10px;
+    margin-top: 57px;
+}
+
+/* Раздел подписка */
+
+
+.subscribes {
+    margin: 0 auto;
+    width: 1200px;
+    height: 411px;
+    background: url('img/subscribe-bg.svg');
+    text-align: center;
+}
+
+.subscribes h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 94px 0 31px 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.subscribes span {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.email-form {
+    height: 60px;
+    margin-top: 46px;
+
+}
+
+.subscribes [type=text] {
+    height: 100%;
+    width: 600px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    padding: 0 20px 0 20px;
+    margin-top: 5px;
+}
+
+
+.subscribes button {
+    height: 100%;
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #83B3D3;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: PT Sans, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+/* Футер, соцсети, контакты, лого */
+
+.footer-wrapper {
+    display: grid;
+    width: 1200px;
+    height: 120px;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.social-networks-list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 72px;
+    align-items: center;
+}
+
+.social-networks-items {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+
+.footer-twitter::after {
+    content: "";
+    background: url('img/social-twitter.svg') no-repeat left center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-facebook::after {
+    content: "";
+    background: url('img/social-facebook.svg') no-repeat left center;
+    width: 10px;
+    height: 18px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-youtube::after {
+    content: "";
+    background: url('img/social-youtube.svg') no-repeat left center;
+    width: 20px;
+    height: 16px;
+    float: left;
+}
+
+.phone-number {
+    justify-self: center;
+    font-family: PT Sans, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+.phone-number-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-logo-link::after {
+    content: "";
+    background: url('img/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    float: left;
+    margin-right: 72px;
+}
+
+
+
+
+
+
+
+
+
