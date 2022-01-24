@@ -29,12 +29,12 @@
               </a>
             </li>
             <li class="user-items">
-                <a class="like-link" href="#">
-                  <img class="favorite" src="img/favorite.svg" alt="like">
-                  <img class="counter" src="img/like-accounter.svg" alt="">
-                  <span class="visyally-hidden">Добавить в избранное</span>
-                  <span class="counter-value">12</span>
-                  </a>
+              <a class="like-link" href="#">
+                <img class="favorite" src="img/favorite.svg" alt="like">
+                <img class="counter" src="img/like-accounter.svg" alt="">
+                <span class="visyally-hidden">Добавить в избранное</span>
+                <span class="counter-value">12</span>
+              </a>
             </li>
           </ul>
           <!-- Нужно ли кнопку помещать в форму или можно просто оставить только кнопку? -->
@@ -49,7 +49,164 @@
       <img src="img/welcome.svg" alt="">
       <img src="img/gorgeous.svg" alt="">
       <img src="img/sedona.svg" alt="">
+    <!-- Картинка Divider под превым экраном -->
       <img src="img/divider.svg" alt="">
     </header>
+    <!-- Основное содержимое -->
+    <main class="wrapper">
+      <section class="advanages-header">
+        <H1>Седона — небольшой городок в Аризоне,<br>
+          заслуживающий большего!</H1>
+          <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+      </section>
+      <!-- Блок с преимуществами -->
+      <section class="advantages-list">
+        <div class="first-advantages advantages-item">
+          <h2>Настоящий<br>
+              городок
+          </h2>
+          <b>— №1 —</b>
+          <br>
+          <span>
+            Седона — не аттракцион<br> 
+            для туристов, там течёт<br> 
+            своя жизнь
+          </span>
+        </div>
+        <img class="first-advantages-img" src="img/first-advantages.svg" alt="Уютный городок">
+        <!-- Преимущества, второй ряд -->
+        <div class="advantages-houses advantage-with-icon">
+          <img src="img/house.svg" alt="Дом">
+          <h2>
+            Жильё
+          </h2>
+          <span>
+            Рекомендуем пожить<br> 
+            в настоящем мотеле,<br> 
+            всё как в кино!
+          </span>
+        </div>
+        <div class="advantages-food advantage-with-icon">
+          <img src="img/food.svg" alt="Гамбургер">
+          <h2>
+            Еда
+          </h2>
+          <span>
+            Всегда заказывайте<br>
+            топовый фирменный бургер,<br> 
+            вы не разочаруетесь!
+          </span>
+        </div>
+        <div class="advantages-souvenirs advantage-with-icon">
+          <img src="img/souvenirs.svg" alt="Сувенир">
+          <h2>
+            Сувениры
+          </h2>
+          <span>
+            Не только китайского,<br> 
+            но и настоящего местного<br> 
+            производства!
+          </span>
+        </div>
+        <!-- Преимущества, третий ряд -->
+        <img class="second-advantages-img" src="img/second-advantages.svg" alt="Мост дьявола">
+        <div class="second-advantages advantages-item">
+          <h2>Там есть<br>
+              мост дьявола
+          </h2>
+          <b>— №2 —</b>
+          <br>
+          <span>
+            Да, по нему можно пройти!<br> 
+            Если вы осмелитесь,<br> 
+            разумеется
+          </span>
+        </div>
+        <!-- Преимущества, четвёртый ряд -->
+        <div class="third-advantages advantages-item">
+          <h2>Небольшая<br>
+              площадь
+          </h2>
+          <b>— №3 —</b>
+          <br>
+          <span>
+            Все достопримечательности<br> 
+            находятся очень близко
+          </span>
+        </div>
+        <div class="fourth-advantages advantages-item">
+          <h2>Красивая<br>
+              дорога
+          </h2>
+          <b>— №4 —</b>
+          <br>
+          <span>
+            Ехать в Седону из Лас-Вегаса<br> 
+            совсем не скучно!
+          </span>
+        </div>
+        <div class="fifth-advantages advantages-item">
+          <h2>Мало<br>
+              Туристов
+          </h2>
+          <b>— №5 —</b>
+          <br>
+          <span>
+            Большинство едет в Гранд<br> 
+            Каньон и толпится там<br> 
+            разумеется
+          </span>
+        </div>
+      </section>
+      <!-- Блок "Заинтересовались?", сссылка на выбор даты поездки -->
+      <section class="interesting">
+        <h2>Заинтересовались?</h2>
+        <span>Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Седоне
+        </span>
+        <br>
+        <a href="#" class="search-hotels">
+          Поиск гостиницы в Седоне
+        </a>
+      </section>
+      <section class="subscribes">
+        <h2>Подпишитесь на рассылку</h2>
+        <span>Только полезная информация и никакого спама,<br>
+          честное бойскаутское!</span>
+          <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input type="text" name="email-sending" placeholder="Ваш e-mail"><button class="subscribe-button">Подписаться</button>
+          </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+      <section class="social-networks">
+        <ul class="social-networks-list">
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-twitter" href="#">
+              <span class="visyally-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-facebook" href="#">
+              <span class="visyally-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-youtube" href="#">
+              <span class="visyally-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="phone-number">
+        <a href="tel:+78128121212" class="phone-number-link">
+          +7 (812) 812-12-12
+        </a>
+      </section>
+      <section class="footer-logo">
+        <a href="https://htmlacademy.ru/" class="footer-logo-link"></a>
+      </section>
+    </footer>
   </body>
 </html>
