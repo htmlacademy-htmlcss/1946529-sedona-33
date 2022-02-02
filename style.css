@@ -1,7 +1,40 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-400.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-400-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-700.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-700-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+}
+
 body {
     background-color: #E5E5E5;
     margin: 0;
     padding: 0;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .top-menu {
@@ -29,7 +62,6 @@ body {
     display: flex;
     flex-wrap: nowrap;
     list-style-type: none;
-    font-family: PT Sans, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -116,7 +148,6 @@ body {
 /* значение счётчика лайков */
 .counter-value {
     position: absolute; 
-    font-family: PT Sans, sans-serif;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -140,7 +171,7 @@ body {
     margin: 0 auto;
     width: 1200px;
     height: 485px;
-    background: url('img/first-screen-bg.svg');
+    background: url('images/first-screen-bg.jpg');
 }
 
 .first-screen img {
@@ -175,7 +206,6 @@ body {
 .wrapper p {
     margin: 0;
     display: block;
-    font-family: PT Sans, sans-serif;
     font-style: normal;
     letter-spacing: 0em;
 }
@@ -353,7 +383,6 @@ body {
 
 .search-hotels {
     text-transform: uppercase;
-    font-family: PT Sans, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -375,7 +404,7 @@ body {
     margin: 0 auto;
     width: 1200px;
     height: 411px;
-    background: url('img/subscribe-bg.svg');
+    background: url('images/subscribe-bg.jpg');
     text-align: center;
 }
 
@@ -426,7 +455,6 @@ body {
     background-color: #83B3D3;
     text-transform: uppercase;
     color: #FFFFFF;
-    font-family: PT Sans, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -462,7 +490,7 @@ body {
 
 .footer-twitter::after {
     content: "";
-    background: url('img/social-twitter.svg') no-repeat left center;
+    background: url('images/social-twitter.svg') no-repeat left center;
     width: 18px;
     height: 15px;
     float: left;
@@ -471,7 +499,7 @@ body {
 
 .footer-facebook::after {
     content: "";
-    background: url('img/social-facebook.svg') no-repeat left center;
+    background: url('images/social-facebook.svg') no-repeat left center;
     width: 10px;
     height: 18px;
     float: left;
@@ -480,7 +508,7 @@ body {
 
 .footer-youtube::after {
     content: "";
-    background: url('img/social-youtube.svg') no-repeat left center;
+    background: url('images/social-youtube.svg') no-repeat left center;
     width: 20px;
     height: 16px;
     float: left;
@@ -488,7 +516,6 @@ body {
 
 .phone-number {
     justify-self: center;
-    font-family: PT Sans, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -503,7 +530,7 @@ body {
 
 .footer-logo-link::after {
     content: "";
-    background: url('img/footer-logo.svg') no-repeat left center;
+    background: url('images/footer-logo.svg') no-repeat left center;
     width: 115px;
     height: 33px;
     float: left;

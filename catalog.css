@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-400.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-400-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-700.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('fonts/ptsans-700-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    background-color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+/* Навигация */
+
+.top-menu {
+    width: 1200px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+/* Создаём грид контейнер для шапки с навигацией */
+.navigation {
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 3fr 1fr auto;
+    grid-auto-rows: minmax(66px, auto);
+    width: 1060px;
+    margin: 0 auto;
+    position: relative;
+} 
+
+.logo-link {
+    margin-right: 30px;
+    position: absolute;
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.navigation-link:hover {
+    color: #756257;
+}
+/* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
+.navigation-link:active {
+    color: #000000;
+    border-bottom: 2px solid #756257;
+    padding: 22px 0;
+}
+/* По стайлгайду не вполне понял что означает состояние "нажатие".
+Почитал это как посещённая ссылка, поэтому применил эти стили к visited  */
+.navigation-link:visited {
+    color: #756257;
+    opacity: 0.3;
+}
+
+.navigation-items {
+    margin-right: 34px;
+}
+
+.navigation-items:last-child {
+    margin-right: 0px;
+}
+
+.navigation-list:first-of-type {
+    padding: 20px 17px;
+    margin: auto 0 auto 169px;
+}
+
+.navigation-button {
+    width: 150px;
+    height: 45px;
+}
+/* Сркываем невидимые спаны */
+.visually-hidden {
+    display: none  !important;
+}
+
+.choose-date-button {
+    width: 160px;
+    height: 37px;
+    background-color: #756257;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-transform: uppercase;
+    align-self: center;
+    outline: none;
+    border: none;
+}
+
+.navigation-user {
+    justify-self: end;
+    align-self: center;
+}
+
+.user-items {
+    margin-right: 24px;
+    position: relative;
+    line-height: 0;
+}
+
+.user-items:last-of-type {
+    margin-right: 20px;
+}
+/* Фон счётчика лайковк */
+.counter {
+    position: absolute;
+    top: -50%;
+    right: -70%;
+}
+/* значение счётчика лайков */
+.counter-value {
+    position: absolute; 
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    color: #FFFFFF;
+    top: -30%;
+    right: -35%;
+}
+
+.like-link {
+    text-decoration: none;
+}
+
+/* Фильтр выбора гостиниц */
+
+.first-screen-catalog {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1200px;
+    height: 408px;
+    background: url('images/catalog-images/first-screen-bg.jpg') no-repeat;
+}
+
+.first-screen-header {
+    margin: 0;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 78px; */
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+.select-hotels {
+    padding: 35px 0 0 72px;
+}
+
+.breadcrumbs {
+    padding-left: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.breadcrumbs img:nth-child(2) {
+    margin: 0 10px;
+}
+
+.breadcrumbs a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.selectors {
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.selectors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 67px 0 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+}
+
+.button-list input,
+.checkbox-list input {
+    transform: translateY(25%);
+    margin-right: 19px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.header-filter-list {
+    margin: 0 0 30px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+.button-list li,
+.checkbox-list li {
+    position: relative;
+    margin-bottom: 13px;
+}
+
+.type-of-hotels::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #3F5E72;
+}
+
+.checkbox:checked+label::before {
+    content: '';
+    position: absolute;
+    top: 47%;
+    left: 5px;
+    display: block;
+    width: 12px;
+    height: 10px;
+    background: url('images/catalog-images/checkbox.svg') no-repeat;
+    z-index: 2;
+}
+
+.infrastructure::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid #3F5E72;
+}
+
+.radio:checked+label::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    background: #3F5E72;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* Первый экран правая секция, выбор дат */
+
+.select-price {
+    display: flex;
+    /* flex-wrap: wrap;   */
+    align-self: flex-end;
+    margin-bottom: 70px;
+}
+
+.price-range p {
+    margin: 0 0 34px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+.price-from,
+.price-to {
+    margin-bottom: 32px;
+    padding-left: 22px;
+    width: 143px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    color: #FFFFFF;
+}
+
+.price-from {
+    border-radius: 4px 0 0 4px;
+}
+
+.price-to {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+}
+
+.price-button {
+    align-self: flex-end;
+}
