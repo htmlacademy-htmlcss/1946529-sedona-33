@@ -351,4 +351,130 @@ body {
 
 .price-button {
     align-self: flex-end;
+    margin-left: 81px;
+}
+
+.button-go {
+    margin-bottom: 2px;
+    width: 160px;
+    height: 48px;
+    border-radius: 4px;
+    background: #83B3D3;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.button-clear {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    width: 160px;
+    height: 48px;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.avaliable-hotels {
+    text-align: center;
+}
+
+.page-pagination {
+    text-align: center;
+}
+
+.page-pagination li {
+    list-style-type: none;
+}
+
+.subscribes {
+    text-align: center;
+}
+
+
+/* Footer */
+
+.footer-wrapper {
+    display: grid;
+    width: 1200px;
+    height: 120px;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.social-networks-list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 72px;
+    align-items: center;
+}
+
+.social-networks-items {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+
+.footer-twitter::after {
+    content: "";
+    background: url('../images/social-twitter.svg') no-repeat left center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-facebook::after {
+    content: "";
+    background: url('../images/social-facebook.svg') no-repeat left center;
+    width: 10px;
+    height: 18px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-youtube::after {
+    content: "";
+    background: url('../images/social-youtube.svg') no-repeat left center;
+    width: 20px;
+    height: 16px;
+    float: left;
+}
+
+.phone-number {
+    justify-self: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+.phone-number-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-logo-link::after {
+    content: "";
+    background: url('../images/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    float: left;
+    margin-right: 72px;
 }
