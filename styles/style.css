@@ -174,7 +174,7 @@ body {
     margin: 0 auto;
     width: 1200px;
     height: 485px;
-    background: url('images/first-screen-bg.jpg');
+    background: url('../images/first-screen-bg.jpg');
 }
 
 .first-screen img {
@@ -407,7 +407,7 @@ body {
     margin: 0 auto;
     width: 1200px;
     height: 411px;
-    background: url('images/subscribe-bg.jpg');
+    background: url('../images/subscribe-bg.jpg');
     text-align: center;
 }
 
@@ -493,7 +493,7 @@ body {
 
 .footer-twitter::after {
     content: "";
-    background: url('images/social-twitter.svg') no-repeat left center;
+    background: url('../images/social-twitter.svg') no-repeat left center;
     width: 18px;
     height: 15px;
     float: left;
@@ -502,7 +502,7 @@ body {
 
 .footer-facebook::after {
     content: "";
-    background: url('images/social-facebook.svg') no-repeat left center;
+    background: url('../images/social-facebook.svg') no-repeat left center;
     width: 10px;
     height: 18px;
     float: left;
@@ -511,7 +511,7 @@ body {
 
 .footer-youtube::after {
     content: "";
-    background: url('images/social-youtube.svg') no-repeat left center;
+    background: url('../images/social-youtube.svg') no-repeat left center;
     width: 20px;
     height: 16px;
     float: left;
@@ -533,7 +533,7 @@ body {
 
 .footer-logo-link::after {
     content: "";
-    background: url('images/footer-logo.svg') no-repeat left center;
+    background: url('../images/footer-logo.svg') no-repeat left center;
     width: 115px;
     height: 33px;
     float: left;

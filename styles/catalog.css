@@ -177,7 +177,7 @@ body {
     grid-template-columns: 1fr 1fr;
     width: 1200px;
     height: 408px;
-    background: url('images/catalog-images/first-screen-bg.jpg') no-repeat;
+    background: url('../images/catalog-images/first-screen-bg.jpg') no-repeat;
 }
 
 .first-screen-header {
@@ -279,7 +279,7 @@ body {
     display: block;
     width: 12px;
     height: 10px;
-    background: url('images/catalog-images/checkbox.svg') no-repeat;
+    background: url('../images/catalog-images/checkbox.svg') no-repeat;
     z-index: 2;
 }
 
