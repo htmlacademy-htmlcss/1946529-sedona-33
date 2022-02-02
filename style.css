@@ -109,8 +109,11 @@ body {
     height: 45px;
 }
 /* Сркываем невидимые спаны */
+
+/* Не поулчилось скрыть заголовок иначе, кроме как как добавлением !important  Как скрыть без него? */
+
 .visually-hidden {
-    display: none  !important;
+    display: none  !important;   
 }
 
 .choose-date-button {
