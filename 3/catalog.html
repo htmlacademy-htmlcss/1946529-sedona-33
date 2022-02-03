@@ -56,20 +56,22 @@
                    <img src="images/catalog-images/nav-arrov.svg" width="5" height="7" alt="Стрелка">
                    <a href="catalog.html">Каталог</a>
                 </span>
-              <div class="selectors">
-                <ul class="checkbox-list">
-                  <p class="header-filter-list">Тип жилья:</p>
-                    <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-1" checked><label for="checkbox-1">Гостиница</label></li>
-                    <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-2"><label for="checkbox-2">Отель</label></li>
-                    <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-3"><label for="checkbox-3">Аппартаменты</label></li>
-                </ul>
-                <ul class="button-list">
-                  <p class="header-filter-list">Инфраструктура:</p>
-                    <li class="infrastructure"><input type="radio" class="radio" id="radio-1" checked><label for="radio-1">Бассейн</label></li>
-                    <li class="infrastructure"><input type="radio" class="radio" id="radio-2"><label for="radio-2">Парковка</label></li>
-                    <li class="infrastructure"><input type="radio" class="radio" id="radio-3"><label for="radio-3">Wi-Fi</label></li>
-                </ul>
-              </div>
+                <div class="headers-to-list">
+                   <p class="header-filter-list">Тип жилья:</p>
+                   <p class="header-filter-list">Инфраструктура:</p>
+                </div>
+                <div class="selectors">
+                  <ul class="checkbox-list">
+                      <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-1" checked><label for="checkbox-1">Гостиница</label></li>
+                      <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-2"><label for="checkbox-2">Отель</label></li>
+                      <li class="type-of-hotels"><input type="checkbox" class="checkbox" id="checkbox-3"><label for="checkbox-3">Аппартаменты</label></li>
+                  </ul>
+                  <ul class="button-list">
+                      <li class="infrastructure"><input type="radio" class="radio" id="radio-1" checked><label for="radio-1">Бассейн</label></li>
+                      <li class="infrastructure"><input type="radio" class="radio" id="radio-2"><label for="radio-2">Парковка</label></li>
+                      <li class="infrastructure"><input type="radio" class="radio" id="radio-3"><label for="radio-3">Wi-Fi</label></li>
+                  </ul>
+                </div>
             </section>
             <section class="select-price">
               <div class="price-range">
@@ -197,7 +199,7 @@
                 <li class="page-pagination-item">10</li>
             </ol>
             <p>Гостиниц на странице:</p>
-            <select name="page-numbers-list" id="">
+            <select name="page-numbers-list" id="quantity-of-pages">
                 <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
