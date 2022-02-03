@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PT Sans';
-    src: url('fonts/ptsans-400.woff2') format('woff2');
+    src: url('../fonts/ptsans-400.woff2') format('woff2');
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('fonts/ptsans-400-italic.woff2') format('woff2');
+    src: url('../fonts/ptsans-400-italic.woff2') format('woff2');
     font-style: italic;
     font-weight: 400;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('fonts/ptsans-700.woff2') format('woff2');
+    src: url('../fonts/ptsans-700.woff2') format('woff2');
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('fonts/ptsans-700-italic.woff2') format('woff2');
+    src: url('../fonts/ptsans-700-italic.woff2') format('woff2');
     font-style: italic;
     font-weight: 700;
     font-display: swap;
@@ -174,7 +174,7 @@ body {
 .first-screen-catalog {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     width: 1200px;
     height: 408px;
     background: url('../images/catalog-images/first-screen-bg.jpg') no-repeat;
@@ -215,8 +215,16 @@ body {
     text-decoration: none;
 }
 
-.selectors {
+.headers-to-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     margin-top: 45px;
+    height: auto;
+}
+
+.selectors {
+    margin-top: 30px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -244,7 +252,7 @@ body {
 }
 
 .header-filter-list {
-    margin: 0 0 30px;
+    margin: 0;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -312,7 +320,6 @@ body {
 
 .select-price {
     display: flex;
-    /* flex-wrap: wrap;   */
     align-self: flex-end;
     margin-bottom: 70px;
 }
