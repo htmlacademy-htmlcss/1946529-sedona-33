@@ -365,6 +365,74 @@ body {
     border-left: none;
 }
 
+/* Слайдер Рендж */
+
+.double-range {
+    display: grid;
+    position: relative;
+    height: 23px;
+    box-sizing: border-box;
+}
+
+.range {
+    background: none;
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.range-left {
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.range-right {
+    z-index: 1;
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.range-track {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    width: 98%;
+    height: 3px;
+    border-radius: 2px 2px 2px 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-track-active {
+    position: absolute;
+    height: 3px;
+    border-radius: 2px 2px 2px 2px;
+    background-color: #ffffff; 
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.range::-webkit-slider-runnable-track {
+    /* pointer-events: none; */
+    -webkit-appearance: none;
+    height: 8px;
+    box-sizing: border-box;
+}
+
+/* Кнопки поиска и сброса */
+
 .price-button {
     align-self: flex-end;
     margin-left: 81px;
