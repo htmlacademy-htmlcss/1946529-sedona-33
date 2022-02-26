@@ -1,0 +1,790 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/ptsans-400.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/ptsans-400-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/ptsans-700.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/ptsans-700-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    background-color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.top-menu {
+    width: 1200px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+/* Создаём грид контейнер для шапки с навигацией */
+.navigation {
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 3fr 1fr auto;
+    grid-auto-rows: minmax(66px, auto);
+    width: 1060px;
+    margin: 0 auto;
+    position: relative;
+} 
+
+.logo-link {
+    margin-right: 30px;
+    position: absolute;
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.navigation-link:hover {
+    color: #756257;
+}
+/* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
+.navigation-link:active {
+    color: #000000;
+    border-bottom: 2px solid #756257;
+    padding: 22px 0;
+}
+/* По стайлгайду не вполне понял что означает состояние "нажатие".
+Почитал это как посещённая ссылка, поэтому применил эти стили к visited  */
+.navigation-link:visited {
+    color: #756257;
+    opacity: 0.3;
+}
+
+.navigation-items {
+    margin-right: 34px;
+}
+
+.navigation-items:last-child {
+    margin-right: 0px;
+}
+
+.navigation-list:first-of-type {
+    padding: 20px 17px;
+    margin: auto 0 auto 169px;
+}
+
+.navigation-button {
+    width: 150px;
+    height: 45px;
+}
+/* Сркываем невидимые спаны */
+
+/* Не поулчилось скрыть заголовок иначе, кроме как как добавлением !important  Как скрыть без него? */
+
+.visually-hidden {
+    display: none  !important;   
+}
+
+.choose-date-button {
+    width: 160px;
+    height: 37px;
+    background-color: #756257;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-transform: uppercase;
+    align-self: center;
+    outline: none;
+    border: none;
+}
+
+.navigation-user {
+    justify-self: end;
+    align-self: center;
+}
+
+.user-items {
+    margin-right: 24px;
+    position: relative;
+    line-height: 0;
+}
+
+.user-items:last-of-type {
+    margin-right: 20px;
+}
+/* Фон счётчика лайковк */
+.counter {
+    position: absolute;
+    top: -50%;
+    right: -70%;
+}
+/* значение счётчика лайков */
+.counter-value {
+    position: absolute; 
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    color: #FFFFFF;
+    top: -30%;
+    right: -35%;
+}
+
+.like-link {
+    text-decoration: none;
+}
+
+/* Модальное окно */
+
+.modal-window {
+    position: absolute;
+    width:100%;
+    min-height:100%;
+    overflow:hidden;
+    position:fixed;
+    background: rgba(242, 242, 242, 0.8);
+    z-index: 10;
+}
+
+.modal-window-content {
+    position: absolute;
+    margin: 0 auto;
+    width: 715px;
+    height: 561px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 54px 70px 70px;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.modal-header {
+    margin: 0;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+}
+
+.modal-header-container,
+.checkin-date,
+.checkout-date,
+.people-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header-container img {
+    cursor: pointer;
+}
+
+.modal-header-inside {
+    margin: 0;
+}
+
+.checkin-date {
+    margin: 54px 0 40px;
+}
+
+.people-quantity {
+    margin: 40px 0 0;
+}
+
+.modal-header-inside {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+#checkin,
+#checkout {
+    width: 420px;
+    height: 50px;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: 0;
+    padding: 0 19px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+#grownups,
+#children {
+    width: 133px;
+    height: 50px;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: 0;
+    padding: 0 19px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.information-icon {
+    margin-right: 30px;
+}
+
+.people-quantity-right p {
+    margin-right: 10px;
+}
+
+#grownups::-webkit-inner-spin-button,
+#grownups::-webkit-outer-spin-button,
+#children::-webkit-inner-spin-button, 
+#children::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.people-quantity-right {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+
+.wrapper-for-plus-minus {
+    position: relative;
+}
+
+.minus,
+.minus-right {
+    display: block;
+    padding: 19px 5px 19px 19px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.plus,
+.plus-right {
+    display: block;
+    padding: 19px 19px 19px 5px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.children-number {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pop-up-window {
+    position: absolute;
+    right: 88px;
+    bottom: -30px;
+}
+
+.pop-up-img {
+    z-index: 1;
+
+}
+
+.text-pop-up {
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: justify;
+    color: #FFFFFF;
+    padding: 22px 42px;
+}
+
+.modal-window-content button {
+    width: 575px;
+    height: 60px;
+    background-color: #83B3D3;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin: 40px 0 0 0;
+    cursor: pointer;
+} 
+
+
+/* Первый экран. Слоган Седоны */
+
+.first-screen {
+    z-index: -1;
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 485px;
+    background: url('../images/first-screen-bg.jpg');
+}
+
+.first-screen img {
+    display: block;
+    margin: auto;
+}
+
+.first-screen img:first-child {
+    padding-top: 46px;
+    padding-bottom: 11px;
+}
+
+.first-screen img:nth-child(3) {
+    padding-top: 53px;
+}
+
+/* Картинка Divider
+!!! По краям разделителя как-будто бы отступы примрено на 1px. 
+Также при просмотре с меньших экранов по нижнему краю появляется серая полоса в 1px  */
+
+.first-screen img:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Раздел преимущества - заголовок */
+
+.wrapper {
+    min-height: calc(100vh - 186px);
+}
+
+.wrapper h1,
+.wrapper h3,
+.wrapper h2,
+.wrapper span,
+.wrapper p {
+    margin: 0;
+    display: block;
+    font-style: normal;
+    letter-spacing: 0em;
+}
+
+.advanages-header {
+    background-color: #ffffff;
+    width: 1200px;
+    height: 282px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.advanages-header p {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 63px 0 23px 0;
+}
+
+.advanages-header p:last-child {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: none;
+    padding: 0;
+    color: #333333;
+}
+
+/* Грид-контейнер со списком преимуществ */
+
+.advantages {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.advantages h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 98px 0 25px 0;
+}
+
+.advantages p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.advantages p:last-child {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-top: 21px;
+}
+
+.advantages-item {
+    text-align: center;
+    width: 400px;
+    height: 384px;
+    color: #FFFFFF;
+}
+
+.first-advantages {
+    background-color: #83B3D3;
+}
+
+.first-advantages-img {
+    grid-column: 2/4;
+}
+
+.first-advantages-img img {
+    display: block;
+}
+
+/* Преимуществ , второй ряд */
+
+.advantage-with-icon {
+    text-align: center;
+    width: 400px;
+    height: 384px;
+}
+
+.advantage-with-icon img {
+    padding: 89px 0 23px 0;
+    margin: 0;
+}
+
+.advantage-with-icon h3 {
+    padding: 0;
+    color: #000000;
+}
+
+.advantage-with-icon p {
+    padding-top: 20px;
+    color: #333333;
+}
+
+.advantages-houses {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-houses::before {
+    content: '';
+    width: 75px;
+    height: 72px;
+    background: url('../images/house.svg') no-repeat;
+    display: block;
+    margin: 89px 0 23px 50%;
+    transform: translateX(-50%);
+}
+
+.advantages-food {
+    background-color: #FFFFFF;
+}
+
+.advantages-food::before {
+    content: '';
+    width: 74px;
+    height: 70px;
+    background: url('../images/food.svg') no-repeat;
+    display: block;
+    margin: 89px 0 23px 50%;
+    transform: translateX(-50%);
+}
+
+.advantages-souvenirs {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-souvenirs::before {
+    content: '';
+    width: 64px;
+    height: 76px;
+    background: url('../images/souvenirs.svg') no-repeat;
+    display: block;
+    margin: 89px 0 23px 50%;
+    transform: translateX(-50%);
+}
+
+/* Преимущества, третий ряд */
+
+.second-advantages-img {
+    grid-column: 1/3;
+}
+
+.second-advantages-img img {
+    display: block;
+}
+
+.second-advantages {
+    background-color: #83B3D3;
+}
+
+/* Преимущества, четвёртый ряд */
+
+.third-advantages,
+.fifth-advantages {
+    background: rgba(131, 179, 211, 0.12);
+    color: #000000;
+}
+
+.fourth-advantages {
+    background: rgba(131, 179, 211, 0.2);
+    color: #000000;
+}
+
+.fourth-advantages p {
+    color: #333333;
+}
+
+/* Блок "Заинтересовались?", сссылка на выбор даты поездки */
+
+.interesting {
+    width: 1200px;
+    height: 417px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.interesting p {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000000;
+    padding: 91px 0 32px 0;
+}
+
+.interesting p:last-of-type {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    text-transform: none;
+    padding: 0;
+}
+
+.search-hotels {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #756257;
+    padding: 15px 150px;
+    border-radius: 10px;
+    margin-top: 57px;
+}
+
+/* Раздел подписка */
+
+
+.subscribes {
+    margin: 0 auto;
+    width: 1200px;
+    height: 411px;
+    background: url('../images/subscribe-bg.jpg');
+    text-align: center;
+}
+
+.subscribes p {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 94px 0 31px 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.subscribes p:last-of-type {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-transform: none;
+    padding: 0;
+}
+
+.email-form {
+    height: 60px;
+    margin-top: 46px;
+
+}
+
+.subscribes [type=text] {
+    height: 60px;
+    width: 600px;
+    border-radius: 4px;
+    background: #F2F2F2;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 22px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    box-sizing: border-box;
+}
+
+.subscribes button {
+    height: 100%;
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #83B3D3;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+/* Футер, соцсети, контакты, лого */
+
+.footer-wrapper {
+    display: grid;
+    width: 1200px;
+    height: 120px;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.social-networks-list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 72px;
+    align-items: center;
+}
+
+.social-networks-items {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+
+.footer-twitter::after {
+    content: "";
+    background: url('../images/social-twitter.svg') no-repeat left center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-facebook::after {
+    content: "";
+    background: url('../images/social-facebook.svg') no-repeat left center;
+    width: 10px;
+    height: 18px;
+    float: left;
+    margin-right:10px;
+}
+
+.footer-youtube::after {
+    content: "";
+    background: url('../images/social-youtube.svg') no-repeat left center;
+    width: 20px;
+    height: 16px;
+    float: left;
+}
+
+.phone-number {
+    justify-self: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+
+.phone-number-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-logo-link::after {
+    content: "";
+    background: url('../images/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    float: left;
+    margin-right: 72px;
+}
+
+
+
+
+
+
+
+
+

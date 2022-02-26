@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>HTML Academy: Седона</title>
+    <base href="https://htmlacademy-htmlcss.github.io/1946529-sedona-33/5/">
+</head>
+  <body>
+       <!-- Всплывающее окно -->
+
+   <div class="modal-window visually-hidden">
+    <div class="modal-window-content">
+      <span class="modal-header-container">
+        <p class="modal-header">Поиск гостиницы в Седоне</p>
+        <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
+      </span>
+      <span class="checkin-date">
+        <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
+      </span>
+      <span class="checkout-date">
+        <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
+      </span>
+      <span class="people-quantity">
+        <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
+        <span class="people-quantity-right">
+          <span class="wrapper-for-plus-minus">
+            <img class="minus" src="images/catalog-images/minus.svg" alt="">
+            <img class="plus" src="images/catalog-images/plus.svg" alt="">
+            <input type="number" id="grownups" value="1">
+          </span>
+          <span class="children-number">
+            <div class="pop-up-window visually-hidden">
+              <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                возраст которых от 6 до 18 лет. 
+                Дети до 6 лет размещаются бесплатно.</p>
+              <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+            </div>
+            <label for="children"><p class="modal-header-inside">Дети:</p></label>
+            <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+            <span class="wrapper-for-plus-minus">
+              <img class="minus-right" src="images/catalog-images/minus.svg" alt="">
+              <img class="plus-right" src="images/catalog-images/plus.svg" alt="">
+              <input type="number" id="children" value="0">
+            </span>
+          </span>
+        </span>
+      </span>
+      <button>Найти</button>
+    </div>
+  </div>
+  
+    <!-- Шапка, главное меню, навигация -->
+    <header class="top-menu">
+      <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-items">
+              <a class="navigation-link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-items">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-items">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="user-items">
+              <a class="search-link" href="#">
+                <img class="search" src="images/search-icon.svg" width="18" height="18" alt="Поиск">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="user-items">
+              <a class="like-link" href="#">
+                <img class="favorite" src="images/favorite.svg" width="18" height="17" alt="В избранное">
+                <img class="counter" src="images/like-accounter.svg" alt="Добавлено в избранное">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <span class="counter-value">12</span>
+              </a>
+            </li>
+          </ul>
+          <button class="choose-date-button">Хочу сюда!</button>
+          <a class="logo-link" href="https://htmlacademy.ru/"><img src="images/logo.svg" width="139" height="70" alt="Логотип Sedona"></a>
+      </nav>
+    </header>
+   
+    <!-- Основное содержимое -->
+    <main class="wrapper">
+      <!-- Скрипт модального окна -->
+      <script>
+        let plusButton = document.querySelector('.plus');
+        let plusButtonRight = document.querySelector('.plus-right');
+        
+        let minusButton = document.querySelector('.minus');
+        let minusButtonRight = document.querySelector('.minus-right');
+
+        let closeButton = document.querySelector('.close-modal-window');
+
+        let grownupsValue = document.getElementById('grownups');
+        let childrenValue = document.getElementById('children');
+
+        let openPopUp = document.querySelector('.choose-date-button');
+        let modalWindow = document.querySelector('.modal-window');
+
+        let miniPopUp = document.querySelector('.pop-up-window');
+        let infoIcon = document.querySelector('.information-icon');
+
+        // Вызов всплывающего окна
+
+        openPopUp.addEventListener('click', ()=> {
+          modalWindow.classList.remove('visually-hidden');
+        })
+
+        // Закрываем всплывающее окно
+
+        closeButton.addEventListener('click', ()=> {
+          modalWindow.classList.add('visually-hidden');
+        })
+
+        // Мини всплывающее окно
+
+        infoIcon.addEventListener('mouseover', ()=> {
+            miniPopUp.classList.remove('visually-hidden');
+        })
+
+        // Закрываем мини всплывающее окно
+
+        infoIcon.addEventListener('mouseleave', ()=> {
+          miniPopUp.classList.add('visually-hidden');
+        })
+
+        plusButton.addEventListener('click', ()=> {
+          let numberGrownups = Number(grownupsValue.value);
+          grownupsValue.value = numberGrownups + 1;
+        })
+
+        minusButton.addEventListener('click', ()=> {
+          if (grownupsValue.value < 1) {
+            grownupsValue.value = 0;
+          } else {
+            let numberGrownups = Number(grownupsValue.value);
+            grownupsValue.value = numberGrownups - 1;
+          }
+        })
+
+        plusButtonRight.addEventListener('click', ()=> {
+          let numberChildren = Number(childrenValue.value);
+          childrenValue.value = numberChildren + 1;
+        })
+
+        minusButtonRight.addEventListener('click', ()=> {
+          if (childrenValue.value < 1) {
+            childrenValue.value = 0;
+          } else {
+            let numberChildren = Number(childrenValue.value);
+            childrenValue.value = numberChildren - 1;
+          }
+        })
+
+      </script>
+      <h1 class="visually-hidden">Информация о городке Седона</h1>
+      <!-- Первый экран, Слоган Седона и фон -->
+      <header class="first-screen">
+        <img src="images/welcome.svg" width="188" height="45" alt="Добро пожаловать">
+        <img src="images/gorgeous.svg" width="256" height="29"  alt="Добро пожаловать">
+        <img src="images/sedona.svg" width="456" height="212" alt="Слоган Седона">
+      <!-- Картинка Divider под превым экраном -->
+        <img src="images/divider.svg" width="1200" height="57" alt="">
+      </header>
+      <section class="advanages-header">
+        <h2 class="visually-hidden">Преимущества седоны</h2>
+        <p class="paragraph-header">Седона — небольшой городок в Аризоне,<br>
+          заслуживающий большего!</p>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+      </section>
+      <!-- Блок с преимуществами -->
+      <section class="advantages">
+        <ol class="advantages-list">
+          <li class="first-advantages advantages-item">
+            <h3 class="advantages-header">Настоящий<br>
+                городок
+            </h3>
+            <p>— №1 —</p>
+            <br>
+            <p>
+              Седона — не аттракцион<br> 
+              для туристов, там течёт<br> 
+              своя жизнь
+            </p>
+          </li>
+          <li class="first-advantages-img">
+            <img src="images/first-advantages.jpg" width="800" height="384" alt="Уютный городок">
+          </li>
+          <!-- Преимущества, второй ряд -->
+          <li class="advantages-houses advantage-with-icon">
+            <h3 class="advantages-header">
+              Жильё
+            </h3>
+            <p>
+              Рекомендуем пожить<br> 
+              в настоящем мотеле,<br> 
+              всё как в кино!
+            </p>
+          </li>
+          <li class="advantages-food advantage-with-icon">
+            <h3 class="advantages-header">
+              Еда
+            </h3>
+            <p>
+              Всегда заказывайте<br>
+              топовый фирменный бургер,<br> 
+              вы не разочаруетесь!
+            </p>
+          </li>
+          <li class="advantages-souvenirs advantage-with-icon">
+            <h3 class="advantages-header">
+              Сувениры
+            </h3>
+            <p>
+              Не только китайского,<br> 
+              но и настоящего местного<br> 
+              производства!
+            </p>
+          </li>
+          <!-- Преимущества, третий ряд -->
+          <li class="second-advantages-img">
+            <img  src="images/second-advantages.jpg" width="800" height="384" alt="Мост дьявола">
+          </li>
+          <li class="second-advantages advantages-item">
+            <h3 class="advantages-header">Там есть<br>
+                мост дьявола
+            </h3>
+            <p>— №2 —</p>
+            <br>
+            <p>
+              Да, по нему можно пройти!<br> 
+              Если вы осмелитесь,<br> 
+              разумеется
+            </p>
+          </li>
+          <!-- Преимущества, четвёртый ряд -->
+          <li class="third-advantages advantages-item">
+            <h3 class="advantages-header">Небольшая<br>
+                площадь
+            </h3>
+            <p>— №3 —</p>
+            <br>
+            <p>
+              Все достопримечательности<br> 
+              находятся очень близко
+            </p>
+          </li>
+          <li class="fourth-advantages advantages-item">
+            <h3 class="advantages-header">Красивая<br>
+                дорога
+            </h3>
+            <p>— №4 —</p>
+            <br>
+            <p>
+              Ехать в Седону из Лас-Вегаса<br> 
+              совсем не скучно!
+            </p>
+          </li>
+          <li class="fifth-advantages advantages-item">
+            <h3 class="advantages-header">Мало<br>
+                Туристов
+            </h3>
+            <p>— №5 —</p>
+            <br>
+            <p>
+              Большинство едет в Гранд<br> 
+              Каньон и толпится там<br> 
+              разумеется
+            </p>
+          </li>
+        </ol>
+      </section>
+      <!-- Блок "Заинтересовались?", сссылка на выбор даты поездки -->
+      <section class="interesting">
+        <h2 class="visually-hidden">
+          Бронирование гостиниц в Седоне
+        </h2>
+        <p class="paragraph-header">Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+        <br>
+        <a href="#" class="search-hotels">
+          Поиск гостиницы в Седоне
+        </a>
+      </section>
+      <section class="subscribes">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p class="paragraph-header">Подпишитесь на рассылку</p>
+        <p>Только полезная информация и никакого спама,<br>
+          честное бойскаутское!</p>
+          <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input type="text" name="email-sending" placeholder="Ваш e-mail"><button class="subscribe-button">Подписаться</button>
+          </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+      <section class="social-networks">
+        <ul class="social-networks-list">
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-twitter" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-networks-items">
+            <a class="social-networks-link footer-youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="phone-number">
+        <a href="tel:+78128121212" class="phone-number-link">
+          +7 (812) 812-12-12
+        </a>
+      </section>
+      <section class="footer-logo">
+        <a href="https://htmlacademy.ru/" class="footer-logo-link"></a>
+      </section>
+    </footer>
+  </body>
+</html>
