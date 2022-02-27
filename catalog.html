@@ -8,6 +8,50 @@
     <title>Document</title>
 </head>
 <body>
+   <!-- Всплывающее окно -->
+
+   <div class="modal-window visually-hidden">
+    <div class="modal-window-content">
+      <span class="modal-header-container">
+        <p class="modal-header">Поиск гостиницы в Седоне</p>
+        <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
+      </span>
+      <span class="checkin-date">
+        <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
+      </span>
+      <span class="checkout-date">
+        <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
+      </span>
+      <span class="people-quantity">
+        <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
+        <span class="people-quantity-right">
+          <span class="wrapper-for-plus-minus">
+            <img class="minus" src="images/catalog-images/minus.svg" alt="">
+            <img class="plus" src="images/catalog-images/plus.svg" alt="">
+            <input type="number" id="grownups" value="1">
+          </span>
+          <span class="children-number">
+            <div class="pop-up-window visually-hidden">
+              <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                возраст которых от 6 до 18 лет. 
+                Дети до 6 лет размещаются бесплатно.</p>
+              <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+            </div>
+            <label for="children"><p class="modal-header-inside">Дети:</p></label>
+            <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+            <span class="wrapper-for-plus-minus">
+              <img class="minus-right" src="images/catalog-images/minus.svg" alt="">
+              <img class="plus-right" src="images/catalog-images/plus.svg" alt="">
+              <input type="number" id="children" value="0">
+            </span>
+          </span>
+        </span>
+      </span>
+      <button>Найти</button>
+    </div>
+  </div>
+
+
     <!-- Шапка, главное меню, навигация -->
     <header class="top-menu">
         <nav class="navigation">
@@ -43,6 +87,80 @@
         </nav>
       </header>
       <main class="catalog-wrapper">
+
+       <!-- Скрипт модального окна -->
+      <script>
+        let plusButton = document.querySelector('.plus');
+        let plusButtonRight = document.querySelector('.plus-right');
+        
+        let minusButton = document.querySelector('.minus');
+        let minusButtonRight = document.querySelector('.minus-right');
+
+        let closeButton = document.querySelector('.close-modal-window');
+
+        let grownupsValue = document.getElementById('grownups');
+        let childrenValue = document.getElementById('children');
+
+        let openPopUp = document.querySelector('.choose-date-button');
+        let modalWindow = document.querySelector('.modal-window');
+
+        let miniPopUp = document.querySelector('.pop-up-window');
+        let infoIcon = document.querySelector('.information-icon');
+
+        // Вызов всплывающего окна
+
+        openPopUp.addEventListener('click', ()=> {
+          modalWindow.classList.remove('visually-hidden');
+        })
+
+        // Закрываем всплывающее окно
+
+        closeButton.addEventListener('click', ()=> {
+          modalWindow.classList.add('visually-hidden');
+        })
+
+        // Мини всплывающее окно
+
+        infoIcon.addEventListener('mouseover', ()=> {
+            miniPopUp.classList.remove('visually-hidden');
+        })
+
+        // Закрываем мини всплывающее окно
+
+        infoIcon.addEventListener('mouseleave', ()=> {
+          miniPopUp.classList.add('visually-hidden');
+        })
+
+        plusButton.addEventListener('click', ()=> {
+          let numberGrownups = Number(grownupsValue.value);
+          grownupsValue.value = numberGrownups + 1;
+        })
+
+        minusButton.addEventListener('click', ()=> {
+          if (grownupsValue.value < 1) {
+            grownupsValue.value = 0;
+          } else {
+            let numberGrownups = Number(grownupsValue.value);
+            grownupsValue.value = numberGrownups - 1;
+          }
+        })
+
+        plusButtonRight.addEventListener('click', ()=> {
+          let numberChildren = Number(childrenValue.value);
+          childrenValue.value = numberChildren + 1;
+        })
+
+        minusButtonRight.addEventListener('click', ()=> {
+          if (childrenValue.value < 1) {
+            childrenValue.value = 0;
+          } else {
+            let numberChildren = Number(childrenValue.value);
+            childrenValue.value = numberChildren - 1;
+          }
+        })
+
+      </script>
+
         <h1 class="visually-hidden">
           Каталог гостиниц Седоны
         </h1>
@@ -75,15 +193,86 @@
             <section class="select-price">
               <div class="price-range">
                 <p>Стоимость, ₽:</p>
-                <input class="price-from" type="text" placeholder="0"><input class="price-to" type="text" placeholder="9000">
+                <input class="price-from" type="text" value=""><input class="price-to" type="text" value="">
                 <br>
-                <input type="range" min="0" max="9000" step="100" value="0">
+                <div class="double-range">
+                  <div class="range-track">
+                    <div class="range-track-active"></div>
+                  </div>
+                  <input class="range-left range" type="range" min="0" max="9000" step="100" value="2500">
+                  <input class="range-right range" type="range" min="0" max="9000" step="100" value="7500">
+                </div>
               </div>
               <div class="price-button">
                 <input class="button-go" type="button" value="Применить">
                 <br>
                 <input class="button-clear" type="button" value="Сбросить">
               </div>
+              <script>
+                let leftRange = document.querySelector('.range-left');
+                let rightRange = document.querySelector('.range-right');
+                let rangeTrack = document.querySelector('.range-track');
+                let rangeTrackActive = document.querySelector('.range-track-active');
+
+                let priceFrom = document.querySelector('.price-from');
+                let priceTo = document.querySelector('.price-to');
+
+                priceFrom.value = leftRange.value;
+                priceTo.value = rightRange.value;
+                rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
+                rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
+
+                let priceDifference = 1000;
+
+                rightRange.addEventListener('click', () => {
+                  if (priceTo.value - priceFrom.value <= priceDifference) {
+                    let numberPriceFromValue = parseInt(priceFrom.value);
+                    rangeTrackActive.style.right = 100 - ((numberPriceFromValue + priceDifference) / rightRange.max) * 100 + '%';
+                    console.log('change');
+                  }
+                });
+
+                priceFrom.onchange = function() {
+                  if (priceTo.value-priceFrom.value <= priceDifference) {
+                    let numberPriceToValue = parseInt(priceTo.value);
+                    priceFrom.value = numberPriceToValue - priceDifference;
+                  }
+                  leftRange.value = priceFrom.value;
+                  rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
+                }
+
+                priceTo.onchange = function() {
+                  // console.log(priceTo.value-priceFrom.value);
+                  if (priceTo.value-priceFrom.value <= priceDifference) {
+                    let numberPriceFromValue = parseInt(priceFrom.value);
+                    priceTo.value = numberPriceFromValue + priceDifference;
+                  }
+                  rightRange.value = priceTo.value;
+                  rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
+                }
+
+                leftRange.addEventListener('input', () => {
+                  if (rightRange.value - leftRange.value < priceDifference) {
+                    priceFrom.value = priceTo.value - priceDifference;
+                    leftRange.value = rightRange.value - priceDifference;
+                  } else {
+                    priceFrom.value = leftRange.value; 
+                    rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
+                  }
+                });
+
+                rightRange.addEventListener('input', () => {
+                  let numberPriceFromValue = parseInt(priceFrom.value);
+                  let numberLeftRangeValue = parseInt(leftRange.value);
+                  if (rightRange.value - leftRange.value < priceDifference) {
+                    priceTo.value = numberPriceFromValue + priceDifference;
+                    rightRange.value = numberLeftRangeValue + priceDifference;
+                  } else {
+                    priceTo.value = rightRange.value; 
+                    rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
+                  }
+                });
+              </script>
             </section>
         </header>
         <!-- Каталог гостиниц, выбор гостиницы -->
