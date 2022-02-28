@@ -11,44 +11,49 @@
    <div class="modal-window visually-hidden">
     <div class="modal-window-content">
       <span class="modal-header-container">
-        <p class="modal-header">Поиск гостиницы в Седоне</p>
+        <legend class="modal-header">Поиск гостиницы в Седоне</legend>
         <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
       </span>
-      <span class="checkin-date">
-        <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
-      </span>
-      <span class="checkout-date">
-        <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
-      </span>
-      <span class="people-quantity">
-        <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
-        <span class="people-quantity-right">
-          <span class="wrapper-for-plus-minus">
-            <img class="minus" src="images/catalog-images/minus.svg" alt="">
-            <img class="plus" src="images/catalog-images/plus.svg" alt="">
-            <input type="number" id="grownups" value="1">
+      <form action="" method="post">
+        <fieldset>
+          <span class="checkin-date">
+            <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
           </span>
-          <span class="children-number">
-            <div class="pop-up-window visually-hidden">
-              <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
-                возраст которых от 6 до 18 лет. 
-                Дети до 6 лет размещаются бесплатно.</p>
-              <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
-            </div>
-            <label for="children"><p class="modal-header-inside">Дети:</p></label>
-            <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
-            <span class="wrapper-for-plus-minus">
-              <img class="minus-right" src="images/catalog-images/minus.svg" alt="">
-              <img class="plus-right" src="images/catalog-images/plus.svg" alt="">
-              <input type="number" id="children" value="0">
+          <span class="checkout-date">
+            <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
+          </span>
+          <span class="people-quantity">
+            <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
+            <span class="people-quantity-right">
+              <span class="wrapper-for-plus-minus">
+                <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                <input type="number" id="grownups" value="1">
+              </span>
+              <span class="children-number">
+                <div class="pop-up-window visually-hidden">
+                  <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                    возраст которых от 6 до 18 лет. 
+                    Дети до 6 лет размещаются бесплатно.</p>
+                  <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+                </div>
+                <label for="children"><p class="modal-header-inside">Дети:</p></label>
+                <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+                <span class="wrapper-for-plus-minus">
+                  <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                  <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                  <input type="number" id="children" value="0">
+                </span>
+              </span>
             </span>
           </span>
-        </span>
-      </span>
-      <button>Найти</button>
+            <button>Найти</button>
+          </fieldset>
+      </form>
     </div>
   </div>
   
+
     <!-- Шапка, главное меню, навигация -->
     <header class="top-menu">
       <nav class="navigation">
