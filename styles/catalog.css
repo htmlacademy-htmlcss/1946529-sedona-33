@@ -75,24 +75,64 @@ body {
 .navigation-link {
     text-decoration: none;
     color: #000000;
+}
 
+.navigation-link:focus {
+    text-decoration: none;
+    color: #000000;
 }
 
 .navigation-link:hover {
     color: #756257;
 }
-/* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
+
+.dark-button-outline:focus {
+    border: 3px solid #756257;
+}
+
+.dark-button-outline:active {
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.light-button-outline:focus {
+    border: 3px solid #ffffff;
+}
+
+.light-button-outline:active {
+    color:rgb(255, 255, 255, 0.3);
+}
+
 .navigation-link:active {
-    color: #000000;
+    color: rgba(117, 98, 87, 0.3);
     border-bottom: 2px solid #756257;
-    padding: 22px 0;
+    padding: 19px 0;
 }
-/* По стайлгайду не вполне понял что означает состояние "нажатие".
-Почитал это как посещённая ссылка, поэтому применил эти стили к visited  */
-.navigation-link:visited {
-    color: #756257;
-    opacity: 0.3;
+
+.blue-button-outline:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
 }
+
+.blue-button-outline:active {
+    color: rgb(131, 179, 211, 0.3);
+}
+
+.phone-button-outline:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.phone-button-outline:active {
+    color: rgba(117, 98, 87, 0.3);
+}
+
+.input-outline:focus {
+    border: 3px solid #83B3D3;
+}
+
+/* .input-outline:active {
+    border: 3px solid #83B3D3;
+} */
 
 .navigation-items {
     margin-right: 34px;
@@ -129,6 +169,16 @@ body {
     align-self: center;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+
+.choose-date-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.choose-date-button:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
 }
 
 .navigation-user {
@@ -265,6 +315,7 @@ body {
     padding: 0 19px;
     box-sizing: border-box;
     text-align: center;
+    -moz-appearance: textfield;
 }
 
 
@@ -364,7 +415,10 @@ body {
     cursor: pointer;
 } 
 
-
+fieldset {
+    padding: 0;
+    border: 0;
+}
 
 /* Фильтр выбора гостиниц */
 
@@ -424,7 +478,9 @@ body {
 .headers-to-list {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    width: 343px;
+    justify-content: space-between;
     margin-top: 45px;
     height: auto;
 }
@@ -575,6 +631,7 @@ body {
     background: none;
     position: absolute;
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     box-sizing: border-box;
 }
@@ -582,6 +639,7 @@ body {
 .range-left {
     position: absolute;
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     box-sizing: border-box;
 }
@@ -590,6 +648,7 @@ body {
     z-index: 1;
     position: absolute;
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     box-sizing: border-box;
 }
@@ -613,6 +672,7 @@ body {
 
 .range::-webkit-slider-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 20px;
     height: 20px;
     background-color: rgb(255, 255, 255);
@@ -621,7 +681,7 @@ body {
 }
 
 .range::-webkit-slider-runnable-track {
-    /* pointer-events: none; */
+    -moz-appearance: none;
     -webkit-appearance: none;
     height: 8px;
     box-sizing: border-box;
@@ -650,6 +710,7 @@ body {
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .button-clear {
@@ -665,6 +726,7 @@ body {
     background: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 /* Доступные гостиницы */
@@ -719,7 +781,7 @@ body {
 }
 
 .display-options:hover {
-    border: 2px solid #000000;
+    border: 2px solid #83B3D3;
     border-radius: 4px;
     padding: 17px 16px;
 }
@@ -797,6 +859,7 @@ body {
     letter-spacing: 0em;
     color: #FFFFFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .favorite-btn {
@@ -812,6 +875,7 @@ body {
     letter-spacing: 0em;
     color: #FFFFFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .favorite-btn-active {
@@ -827,6 +891,7 @@ body {
     letter-spacing: 0em;
     color: #FFFFFF;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .hotel-rating {
@@ -1043,6 +1108,7 @@ body {
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -1077,6 +1143,10 @@ body {
     height: 15px;
     float: left;
     margin-right:10px;
+}
+
+.footer-twitter::after:focus {
+    border: 3px solid #83B3D3;
 }
 
 .footer-facebook::after {

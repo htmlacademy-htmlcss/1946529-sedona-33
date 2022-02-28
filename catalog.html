@@ -13,41 +13,45 @@
    <div class="modal-window visually-hidden">
     <div class="modal-window-content">
       <span class="modal-header-container">
-        <p class="modal-header">Поиск гостиницы в Седоне</p>
+        <legend class="modal-header">Поиск гостиницы в Седоне</legend>
         <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
       </span>
-      <span class="checkin-date">
-        <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
-      </span>
-      <span class="checkout-date">
-        <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
-      </span>
-      <span class="people-quantity">
-        <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
-        <span class="people-quantity-right">
-          <span class="wrapper-for-plus-minus">
-            <img class="minus" src="images/catalog-images/minus.svg" alt="">
-            <img class="plus" src="images/catalog-images/plus.svg" alt="">
-            <input type="number" id="grownups" value="1">
-          </span>
-          <span class="children-number">
-            <div class="pop-up-window visually-hidden">
-              <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
-                возраст которых от 6 до 18 лет. 
-                Дети до 6 лет размещаются бесплатно.</p>
-              <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
-            </div>
-            <label for="children"><p class="modal-header-inside">Дети:</p></label>
-            <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+      <form action="" method="post">
+      <fieldset>
+        <span class="checkin-date input-outline">
+          <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
+        </span>
+        <span class="checkout-date input-outline">
+          <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
+        </span>
+        <span class="people-quantity">
+          <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
+          <span class="people-quantity-right">
             <span class="wrapper-for-plus-minus">
-              <img class="minus-right" src="images/catalog-images/minus.svg" alt="">
-              <img class="plus-right" src="images/catalog-images/plus.svg" alt="">
-              <input type="number" id="children" value="0">
+              <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше">
+              <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше">
+              <input type="number" id="grownups" value="1">
+            </span>
+            <span class="children-number">
+              <div class="pop-up-window visually-hidden">
+                <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                  возраст которых от 6 до 18 лет. 
+                  Дети до 6 лет размещаются бесплатно.</p>
+                <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+              </div>
+              <label for="children"><p class="modal-header-inside">Дети:</p></label>
+              <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+              <span class="wrapper-for-plus-minus">
+                <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше">
+                <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше">
+                <input type="number" id="children" value="0">
+              </span>
             </span>
           </span>
         </span>
-      </span>
-      <button>Найти</button>
+        <button class="dark-button-outline">Найти</button>
+      </fieldset>
+      </form>
     </div>
   </div>
 
@@ -88,7 +92,7 @@
       </header>
       <main class="catalog-wrapper">
 
-       <!-- Скрипт модального окна -->
+       <!-- Скрипт всплывающего окна -->
       <script>
         let plusButton = document.querySelector('.plus');
         let plusButtonRight = document.querySelector('.plus-right');
@@ -193,7 +197,7 @@
             <section class="select-price">
               <div class="price-range">
                 <p>Стоимость, ₽:</p>
-                <input class="price-from" type="text" value=""><input class="price-to" type="text" value="">
+                <input class="price-from input-outline" type="text" value=""><input class="price-to input-outline" type="text" value="">
                 <br>
                 <div class="double-range">
                   <div class="range-track">
@@ -204,9 +208,9 @@
                 </div>
               </div>
               <div class="price-button">
-                <input class="button-go" type="button" value="Применить">
+                <input class="button-go light-button-outline" type="button" value="Применить">
                 <br>
-                <input class="button-clear" type="button" value="Сбросить">
+                <input class="button-clear blue-button-outline" type="button" value="Сбросить">
               </div>
               <script>
                 let leftRange = document.querySelector('.range-left');
@@ -284,7 +288,7 @@
             <div class="avaliable-hotels-header">
                 <p>Найдено гостиниц: 38</p>
 
-                <select name="filter-hotels" id="filter-hotels">
+                <select name="filter-hotels" id="filter-hotels" class="input-outline">
                     <option value="">Сначала дешёвые</option>
                     <option value="">Рейтинг по возратсанию</option>
                 </select>
@@ -305,8 +309,8 @@
                         <p>от 4000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn">
-                        <input type="button" value="В избранное" class="favorite-btn">
+                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
+                        <input type="button" value="В избранное" class="favorite-btn dark-button-outline">
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
@@ -326,8 +330,8 @@
                         <p>от 3000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn">
-                        <input type="button" value="В избранное" class="favorite-btn">
+                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
+                        <input type="button" value="В избранное" class="favorite-btn dark-button-outline">
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
@@ -346,8 +350,8 @@
                         <p>от 2000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn">
-                        <input type="button" value="В избранном" class="favorite-btn-active">
+                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
+                        <input type="button" value="В избранном" class="favorite-btn-active dark-button-outline">
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
@@ -365,8 +369,8 @@
                         <p>от 3000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn">
-                        <input type="button" value="В избранном" class="favorite-btn">
+                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
+                        <input type="button" value="В избранном" class="favorite-btn dark-button-outline">
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
@@ -379,21 +383,21 @@
             </ul>
             <!-- Кнопка загрузить больше -->
             <img src="images/catalog-images/divider.svg" class="divider" width="1055" height="1" alt="">
-            <button class="load-more">Загрузить ещё</button>
+            <button class="dark-button-outline load-more">Загрузить ещё</button>
             <img src="images/catalog-images/divider.svg" class="divider" width="1055" height="1" alt="">
         </section>
         <!-- Нуммерация страниц -->
         <section class="page-pagination">
             <ol class="page-pagination-list">
-                <a href="#" class="page-pagination-item"><li>1</li></a>
-                <a href="#" class="page-pagination-item"><li>2</li></a>
-                <a href="#" class="page-pagination-item"><li>3</li></a>
-                <a href="#" class="page-pagination-item"><li>4</li></a>
-                <a href="#" class="page-pagination-item"><li>...</li></a>
-                <a href="#" class="page-pagination-item"><li>10</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>1</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>2</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>3</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>4</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>...</li></a>
+                <a href="#" class="dark-button-outline page-pagination-item"><li>10</li></a>
             </ol>
             <p>Гостиниц на странице:</p>
-            <select name="page-numbers-list" id="quantity-of-pages">
+            <select name="page-numbers-list" id="quantity-of-pages" class="input-outline">
                 <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
@@ -407,7 +411,7 @@
             <p>Только полезная информация и никакого спама,<br>
               честное бойскаутское!</p>
               <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input type="text" name="email-sending" placeholder="Ваш e-mail" class="email"><button class="subscribe-button">Подписаться</button>
+                <input type="text" name="email-sending" placeholder="Ваш e-mail" class="email input-outline"><button class="subscribe-button dark-button-outline">Подписаться</button>
               </form>
           </section>
       </main>
@@ -434,7 +438,7 @@
           </ul>
         </section>
         <section class="phone-number">
-          <a href="tel:+78128121212" class="phone-number-link">
+          <a href="tel:+78128121212" class="phone-number-link phone-button-outline">
             +7 (812) 812-12-12
           </a>
         </section>

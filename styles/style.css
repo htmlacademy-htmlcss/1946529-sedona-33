@@ -72,7 +72,11 @@ body {
 .navigation-link {
     text-decoration: none;
     color: #000000;
+}
 
+.navigation-link:focus {
+    text-decoration: none;
+    color: #000000;
 }
 
 .navigation-link:hover {
@@ -80,15 +84,9 @@ body {
 }
 /* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
 .navigation-link:active {
-    color: #000000;
+    color: rgba(117, 98, 87, 0.3);
     border-bottom: 2px solid #756257;
-    padding: 22px 0;
-}
-/* По стайлгайду не вполне понял что означает состояние "нажатие".
-Почитал это как посещённая ссылка, поэтому применил эти стили к visited  */
-.navigation-link:visited {
-    color: #756257;
-    opacity: 0.3;
+    padding: 19px 0;
 }
 
 .navigation-items {
@@ -126,6 +124,16 @@ body {
     align-self: center;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+
+.choose-date-button:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.choose-date-button:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-user {
@@ -169,7 +177,6 @@ body {
 /* Модальное окно */
 
 .modal-window {
-    position: absolute;
     width:100%;
     min-height:100%;
     overflow:hidden;
@@ -262,6 +269,7 @@ body {
     padding: 0 19px;
     box-sizing: border-box;
     text-align: center;
+    -moz-appearance: textfield;
 }
 
 
@@ -361,6 +369,10 @@ body {
     cursor: pointer;
 } 
 
+fieldset {
+    padding: 0;
+    border: 0;
+}
 
 /* Первый экран. Слоган Седоны */
 
@@ -665,6 +677,10 @@ body {
     color: #FFFFFF;
     text-transform: none;
     padding: 0;
+}
+
+.subscribe-button {
+    cursor: pointer;
 }
 
 .email-form {
