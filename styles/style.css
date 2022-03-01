@@ -82,11 +82,51 @@ body {
 .navigation-link:hover {
     color: #756257;
 }
-/* Задал отсуп нижнего подчеркивания от элемента меню через padding корректно так делать? */
+
 .navigation-link:active {
     color: rgba(117, 98, 87, 0.3);
     border-bottom: 2px solid #756257;
     padding: 19px 0;
+}
+
+/* Состояния для элементов кнопок, инпутов */
+
+.dark-button-outline:focus {
+    border: 3px solid #756257;
+}
+
+.dark-button-outline:active {
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.light-button-outline:focus {
+    border: 3px solid #ffffff;
+}
+
+.light-button-outline:active {
+    color:rgb(255, 255, 255, 0.3);
+}
+
+.blue-button-outline:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.blue-button-outline:active {
+    color: rgb(131, 179, 211, 0.3);
+}
+
+.phone-button-outline:focus {
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+
+.phone-button-outline:active {
+    color: rgba(117, 98, 87, 0.3);
+}
+
+.input-outline:focus {
+    border: 3px solid #83B3D3;
 }
 
 .navigation-items {
@@ -654,42 +694,37 @@ fieldset {
 
 
 .subscribes {
-    margin: 0 auto;
     width: 1200px;
-    height: 411px;
-    background: url('../images/subscribe-bg.jpg');
+    height: 100%;
+    margin: 0 auto;
+    background: url('../images/subscribe-bg.jpg') no-repeat;
     text-align: center;
+    padding: 93px 0;
+
 }
 
-.subscribes p {
+.catalog-paragraph-header {
+    margin: 0;
     font-size: 30px;
+    font-style: normal;
     font-weight: 700;
     line-height: 36px;
-    padding: 94px 0 31px 0;
+    letter-spacing: 0em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .subscribes p:last-of-type {
+    margin: 32px 0 45px;
     font-size: 22px;
+    font-style: normal;
     font-weight: 400;
     line-height: 26px;
-    color: #FFFFFF;
-    text-transform: none;
-    padding: 0;
+    letter-spacing: 0em;
+    color: #ffffff;
 }
 
-.subscribe-button {
-    cursor: pointer;
-}
-
-.email-form {
-    height: 60px;
-    margin-top: 46px;
-
-}
-
-.subscribes [type=text] {
+.email {
     height: 60px;
     width: 600px;
     border-radius: 4px;
@@ -706,8 +741,8 @@ fieldset {
     box-sizing: border-box;
 }
 
-.subscribes button {
-    height: 100%;
+.subscribe-button {
+    height: 60px;
     width: 200px;
     border-radius: 0 10px 10px 0;
     border: none;
@@ -719,6 +754,7 @@ fieldset {
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
+    cursor: pointer;
 }
 
 /* Футер, соцсети, контакты, лого */
@@ -742,35 +778,138 @@ fieldset {
 }
 
 .social-networks-items {
+    position: relative;
     list-style-type: none;
-    margin-right: 30px;
+    /* border: 2px solid black; */
+    width: 65px;
+    height: 45px;
 }
 
 
 .footer-twitter::after {
     content: "";
-    background: url('../images/social-twitter.svg') no-repeat left center;
+    background: url('../images/social-twitter.svg') no-repeat center;
     width: 18px;
     height: 15px;
     float: left;
-    margin-right:10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 15px;
+}
+
+.footer-twitter:focus:after {
+    content: "";
+    background: url('../images/social-twitter.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+    padding: 11px 12px;
+}
+
+.footer-twitter:active::after {
+    content: "";
+    background: url('../images/social-twitter.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 12px;
+    opacity: 0.3;
 }
 
 .footer-facebook::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
     content: "";
-    background: url('../images/social-facebook.svg') no-repeat left center;
+    background: url('../images/social-facebook.svg') no-repeat center;
     width: 10px;
     height: 18px;
-    float: left;
-    margin-right:10px;
+    padding: 11px 15px;
+}
+
+.footer-facebook:focus::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/social-facebook.svg') no-repeat center;
+    width: 10px;
+    height: 18px;
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+    padding: 11px 15px;
+}
+
+.footer-facebook:active::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/social-facebook.svg') no-repeat center;
+    width: 10px;
+    height: 18px;
+    opacity: 0.3;
+    padding: 11px 15px;
 }
 
 .footer-youtube::after {
     content: "";
-    background: url('../images/social-youtube.svg') no-repeat left center;
-    width: 20px;
-    height: 16px;
+    background: url('../images/social-youtube.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
     float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 15px;
+}
+
+.footer-youtube:focus:after {
+    content: "";
+    background: url('../images/social-youtube.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+    padding: 11px 12px;
+}
+
+.footer-youtube:active::after {
+    content: "";
+    background: url('../images/social-youtube.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 12px;
+    opacity: 0.3;
 }
 
 .phone-number {
@@ -787,13 +926,46 @@ fieldset {
     color: #000000;
 }
 
+.footer-logo {
+    position: relative;
+    margin-right: 72px;
+}
+
 .footer-logo-link::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     content: "";
     background: url('../images/footer-logo.svg') no-repeat left center;
     width: 115px;
     height: 33px;
     float: left;
-    margin-right: 72px;
+}
+
+.footer-logo-link:focus::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+}
+
+.footer-logo-link:active::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    opacity: 0.3;
 }
 
 
