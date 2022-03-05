@@ -159,8 +159,8 @@ body {
 }
 
 .choose-date-button {
-    width: 160px;
-    height: 37px;
+    min-width: 160px;
+    min-height: 37px;
     background-color: #756257;
     color: #FFFFFF;
     border-radius: 4px;
@@ -194,6 +194,23 @@ body {
 .user-items:last-of-type {
     margin-right: 20px;
 }
+
+.search-link:hover {
+    opacity: 0.6;
+}
+
+.search-link:active {
+    opacity: 0.3;
+}
+
+.like-link:hover {
+    opacity: 0.6;
+}
+
+.like-link:active {
+    opacity: 0.3;
+}
+
 /* Фон счётчика лайковк */
 .counter {
     position: absolute;
@@ -206,12 +223,14 @@ body {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 13px;
-    letter-spacing: -0.1em;
     text-align: center;
     color: #FFFFFF;
-    top: -30%;
-    right: -35%;
+    background: #7DB550;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    top: -45%;
+    left: 55%;
 }
 
 .like-link {
@@ -234,7 +253,7 @@ body {
     position: absolute;
     margin: 0 auto;
     width: 715px;
-    height: 561px;
+    min-height: 561px;
     background-color: #FFFFFF;
     border-radius: 30px;
     padding: 54px 70px 70px;
@@ -435,8 +454,9 @@ fieldset {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 1200px;
-    height: 408px;
+    min-height: 408px;
     background: url('../images/catalog-images/first-screen-bg.jpg') no-repeat;
+    background-size: 100% 100%;
 }
 
 .first-screen-header {
@@ -485,8 +505,7 @@ fieldset {
 .headers-to-list {
     display: flex;
     flex-wrap: nowrap;
-    /* justify-content: flex-start; */
-    width: 343px;
+    width: 350px;
     justify-content: space-between;
     margin-top: 45px;
     height: auto;
@@ -499,6 +518,7 @@ fieldset {
 }
 
 .selectors ul {
+    margin-right: 19px;
     list-style-type: none;
     padding: 0;
     margin: 0 67px 0 0;
@@ -510,18 +530,30 @@ fieldset {
     letter-spacing: 0em;
 }
 
+.checkbox-list,
+.button-list {
+    width: 125px;
+}
+
+/* Чекбоксы и радиокнопки */
+
 .button-list input,
 .checkbox-list input {
-    transform: translateY(25%);
-    margin-right: 19px;
+    position: absolute;
     width: 20px;
     height: 20px;
     opacity: 0;
     cursor: pointer;
+    transform: translate(25%,5%);
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
 }
 
 .header-filter-list {
     margin: 0;
+    width: 160px;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -530,31 +562,25 @@ fieldset {
     color: #FFFFFF;
 }
 
-.button-list li,
-.checkbox-list li {
+.type-of-hotels,
+.infrastructure {
+    display: flex;
+    align-items: center;
     position: relative;
     margin-bottom: 13px;
 }
 
-.type-of-hotels::before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border-radius: 5px;
-    border: 1px solid #3F5E72;
-}
+
 
 .type-of-hotels::before {
+    justify-self: center;
     content: '';
     position: absolute;
-    top: 25%;
     display: block;
     width: 20px;
     height: 20px;
+    top: 0;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 5px;
     border: 1px solid #3F5E72;
@@ -563,10 +589,10 @@ fieldset {
 .type-of-hotels:hover::before {
     content: '';
     position: absolute;
-    top: 25%;
     display: block;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 5px;
     border: 1px solid #3F5E72;
@@ -576,47 +602,53 @@ fieldset {
 .type-of-hotels:active::before {
     content: '';
     position: absolute;
-    top: 25%;
     display: block;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 5px;
-    border: 1px solid #3F5E72;
     opacity: 0.3;
 }
 
 .type-of-hotels:focus::before {
     content: '';
     position: absolute;
-    top: 25%;
     display: block;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 5px;
-    border: 10px solid #83B3D3;
+    border: 3px solid #83B3D3;
+    box-sizing: border-box;
     opacity: 0.3;
 }
 
-.checkbox:checked+label::before {
+.checkbox:checked~.arrow::before {
     content: '';
     position: absolute;
-    top: 47%;
-    left: 5px;
-    display: block;
+    top: 0;
+    transform: translate(70%, 70%);
     width: 12px;
     height: 10px;
     background: url('../images/catalog-images/checkbox.svg') no-repeat;
-    z-index: 2;
+}
+
+.checkbox-wrapper {
+    display: block;
+    min-width: 40px;
+    min-height: 28px;
 }
 
 .infrastructure::before {
     content: '';
     position: absolute;
-    top: 25%;
+    display: block;
+    top: 0;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 50%;
     border: 1px solid #3F5E72;
@@ -625,9 +657,11 @@ fieldset {
 .infrastructure:hover::before {
     content: '';
     position: absolute;
-    top: 25%;
+    display: block;
+    top: 0;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 50%;
     border: 1px solid #3F5E72;
@@ -637,22 +671,26 @@ fieldset {
 .infrastructure:active::before {
     content: '';
     position: absolute;
-    top: 25%;
+    display: block;
+    top: 0;
     width: 20px;
     height: 20px;
+    transform: translateX(15%);
     background: #FFFFFF;
     border-radius: 50%;
     border: 1px solid #3F5E72;
     opacity: 0.3;
 }
 
-.radio:checked+label::before {
+.radio:checked~.radio-active::before {
     content: '';
     position: absolute;
-    top: 30%;
+    display: block;
+    top: 0;
     left: 1px;
     width: 20px;
     height: 20px;
+    transform: translate(17%,5%);
     background: #3F5E72;
     border-radius: 50%;
     border: 5px solid #FFFFFF;
@@ -660,12 +698,20 @@ fieldset {
     box-sizing: border-box;
 }
 
+.radio-wrapper {
+    display: block;
+    min-width: 40px;
+}
 /* Первый экран правая секция, выбор дат */
 
 .select-price {
     display: flex;
     align-self: flex-end;
     margin-bottom: 70px;
+}
+
+.price-range {
+    width: 290px;
 }
 
 .price-range p {
@@ -822,7 +868,7 @@ fieldset {
 }
 
 .avaliable-hotels-header p {
-    margin: 0;
+    margin: 0 20px 0 0;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -832,7 +878,13 @@ fieldset {
     text-transform: uppercase;
 }
 
+.show-how {
+    min-width: 195px;
+    margin: 0 0 0 20px;
+}
+
 #filter-hotels {
+    margin: 0 20px;
     width: 287px;
     height: 48px;
     border: 2px solid #E6E6E6;
@@ -892,6 +944,7 @@ fieldset {
 
 .hotels-items {
     padding: 20px;
+    width: 300px;
 }
 
 .hotels-items p {
@@ -915,6 +968,9 @@ fieldset {
 }
 
 .price-hotel p {
+    box-sizing: border-box;
+    width: 170px;
+    padding-right: 30px;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -984,10 +1040,17 @@ fieldset {
     margin-top: 16px;
 }
 
+.stars {
+    min-width: 100px;
+}
+
 .hotel-rating p:last-child {
+    box-sizing: border-box;
+    width: 160px;
+    text-align: center;
     background-color: #F2F2F2;
     border-radius: 4px;
-    padding: 10px 25px;
+    padding: 10px 10px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -999,6 +1062,15 @@ fieldset {
 .divider {
     margin: 0 auto;
     padding: 0;
+}
+
+.load-more-container {
+    display: flex;
+    width: 1055px;
+    height: 122px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    margin: 0 auto;
 }
 
 .load-more {
@@ -1014,14 +1086,13 @@ fieldset {
     letter-spacing: 0em;
     text-transform: uppercase;
     border: none;
-    justify-self: center;
     cursor: pointer;
-    margin: 30px 0;
+    margin: 30px auto;
 }
 
 .page-pagination {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 2fr auto auto;
     justify-content: space-between;
     width: 1200px;
     margin: 0 auto;
@@ -1039,6 +1110,7 @@ fieldset {
 }
 
 .page-pagination-item {
+    overflow: hidden;
     box-sizing: border-box;
     display: block;
     position: relative;
@@ -1053,11 +1125,12 @@ fieldset {
     background-color: #83B3D3;
     border-radius: 4px;
     margin-right: 7px;
-    width: 55px;
+    min-width: 55px;
     height: 55px;
 }
 
 .page-pagination-item:hover {
+    overflow: hidden;
     display: block;
     position: relative;
     margin: 0;
@@ -1071,11 +1144,12 @@ fieldset {
     background-color: #F2F2F2;
     border-radius: 4px;
     margin-right: 7px;
-    width: 55px;
+    min-width: 55px;
     height: 55px;
 }
 
 .page-pagination-item:active {
+    overflow: hidden;
     display: block;
     position: relative;
     margin: 0;
@@ -1089,7 +1163,7 @@ fieldset {
     background-color: #F2F2F2;
     border-radius: 4px;
     margin-right: 7px;
-    width: 55px;
+    min-width: 55px;
     height: 55px;
 }
 
@@ -1111,6 +1185,7 @@ fieldset {
     line-height: 23px;
     letter-spacing: 0em;
     margin-right: 51px;
+    margin-left: 30px;
 }
 
 #quantity-of-pages {
@@ -1178,9 +1253,19 @@ fieldset {
     box-sizing: border-box;
 }
 
-.subscribe-button {
+.email-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
     height: 60px;
-    width: 200px;
+}
+
+.subscribe-button {
+    box-sizing: border-box;
+    height: 60px;
+    min-width: 200px;
+    max-width: 350px;
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: #83B3D3;
@@ -1358,11 +1443,14 @@ fieldset {
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 0em;
+    margin: 0 30px 15px;
 }
 
 .phone-number-link {
+    padding: 10px 15px;
     text-decoration: none;
     color: #000000;
+    text-align: center;
 }
 
 .footer-logo {
