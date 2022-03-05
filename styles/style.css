@@ -190,6 +190,7 @@ body {
 .user-items:last-of-type {
     margin-right: 20px;
 }
+
 /* Фон счётчика лайковк */
 .counter {
     position: absolute;
@@ -202,16 +203,34 @@ body {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 13px;
-    letter-spacing: -0.1em;
     text-align: center;
     color: #FFFFFF;
-    top: -30%;
-    right: -35%;
+    background: #7DB550;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    top: -45%;
+    left: 55%;
 }
 
 .like-link {
     text-decoration: none;
+}
+
+.search-link:hover {
+    opacity: 0.6;
+}
+
+.search-link:active {
+    opacity: 0.3;
+}
+
+.like-link:hover {
+    opacity: 0.6;
+}
+
+.like-link:active {
+    opacity: 0.3;
 }
 
 /* Модальное окно */
@@ -229,7 +248,7 @@ body {
     position: absolute;
     margin: 0 auto;
     width: 715px;
-    height: 561px;
+    min-height: 561px;
     background-color: #FFFFFF;
     border-radius: 30px;
     padding: 54px 70px 70px;
@@ -479,7 +498,7 @@ fieldset {
     line-height: 36px;
     color: #000000;
     text-transform: uppercase;
-    padding: 63px 0 23px 0;
+    padding: 63px 50px 23px 50px;
 }
 
 .advanages-header p:last-child {
@@ -514,7 +533,8 @@ fieldset {
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
-    padding: 98px 0 25px 0;
+    padding: 98px 20px 25px 20px;
+
 }
 
 .advantages p {
@@ -531,6 +551,7 @@ fieldset {
 }
 
 .advantages-item {
+    overflow: hidden;
     text-align: center;
     width: 400px;
     height: 384px;
@@ -552,9 +573,10 @@ fieldset {
 /* Преимуществ , второй ряд */
 
 .advantage-with-icon {
+    overflow: hidden;
     text-align: center;
     width: 400px;
-    height: 384px;
+    height: 384px;  
 }
 
 .advantage-with-icon img {
@@ -563,11 +585,13 @@ fieldset {
 }
 
 .advantage-with-icon h3 {
+    margin: 0 20px;
     padding: 0;
     color: #000000;
 }
 
 .advantage-with-icon p {
+    margin: 0 20px;
     padding-top: 20px;
     color: #333333;
 }
@@ -610,7 +634,7 @@ fieldset {
     height: 76px;
     background: url('../images/souvenirs.svg') no-repeat;
     display: block;
-    margin: 89px 0 23px 50%;
+    margin: 89px 0 20px 50%;
     transform: translateX(-50%);
 }
 
@@ -649,7 +673,7 @@ fieldset {
 
 .interesting {
     width: 1200px;
-    height: 417px;
+    min-height: 417px;
     background-color: #FFFFFF;
     text-align: center;
     margin: 0 auto;
@@ -662,7 +686,7 @@ fieldset {
     font-weight: 700;
     line-height: 36px;
     color: #000000;
-    padding: 91px 0 32px 0;
+    padding: 91px 50px 32px 50px;
 }
 
 .interesting p:last-of-type {
@@ -675,6 +699,8 @@ fieldset {
 }
 
 .search-hotels {
+    min-width: 575px;
+    max-width: 700px;
     text-transform: uppercase;
     font-size: 20px;
     font-style: normal;
@@ -687,7 +713,7 @@ fieldset {
     background-color: #756257;
     padding: 15px 150px;
     border-radius: 10px;
-    margin-top: 57px;
+    margin: 57px 0 10px 0;
 }
 
 /* Раздел подписка */
@@ -695,12 +721,13 @@ fieldset {
 
 .subscribes {
     width: 1200px;
-    height: 100%;
+    min-height: 411px;
     margin: 0 auto;
     background: url('../images/subscribe-bg.jpg') no-repeat;
     text-align: center;
-    padding: 93px 0;
-
+    padding: 90px 50px;
+    box-sizing: border-box;
+    background-size: 100% 100%;
 }
 
 .catalog-paragraph-header {
@@ -724,6 +751,14 @@ fieldset {
     color: #ffffff;
 }
 
+.email-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 60px;
+}
+
 .email {
     height: 60px;
     width: 600px;
@@ -742,8 +777,11 @@ fieldset {
 }
 
 .subscribe-button {
+    overflow: hidden ;
+    box-sizing: border-box;
     height: 60px;
-    width: 200px;
+    min-width: 200px;
+    max-width: 350px;
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: #83B3D3;
@@ -919,11 +957,14 @@ fieldset {
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 0em;
+    margin: 0 30px;
 }
 
 .phone-number-link {
+    padding: 10px 15px;
     text-decoration: none;
     color: #000000;
+    text-align: center;
 }
 
 .footer-logo {
