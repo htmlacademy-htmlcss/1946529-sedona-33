@@ -1829,7 +1829,7 @@ fieldset {
     outline: none;
 }
 
-#quantity-of-pages option {
+.quantity-of-pages option {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
