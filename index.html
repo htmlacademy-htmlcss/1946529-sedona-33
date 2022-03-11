@@ -6,54 +6,6 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-       <!-- Всплывающее окно -->
-
-   <div class="modal-window visually-hidden">
-    <div class="modal-window-content">
-      <span class="modal-header-container">
-        <legend class="modal-header">Поиск гостиницы в Седоне</legend>
-        <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
-      </span>
-      <form action="" method="post">
-        <fieldset>
-          <span class="checkin-date">
-            <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
-          </span>
-          <span class="checkout-date">
-            <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
-          </span>
-          <span class="people-quantity">
-            <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
-            <span class="people-quantity-right">
-              <span class="wrapper-for-plus-minus">
-                <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
-                <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
-                <input type="number" id="grownups" value="1">
-              </span>
-              <span class="children-number">
-                <div class="pop-up-window visually-hidden">
-                  <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
-                    возраст которых от 6 до 18 лет. 
-                    Дети до 6 лет размещаются бесплатно.</p>
-                  <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
-                </div>
-                <label for="children"><p class="modal-header-inside">Дети:</p></label>
-                <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
-                <span class="wrapper-for-plus-minus">
-                  <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
-                  <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
-                  <input type="number" id="children" value="0">
-                </span>
-              </span>
-            </span>
-          </span>
-            <button class="dark-button-outline">Найти</button>
-          </fieldset>
-      </form>
-    </div>
-  </div>
-  
-
     <!-- Шапка, главное меню, навигация -->
     <header class="top-menu">
       <nav class="navigation">
@@ -78,10 +30,10 @@
             <li class="user-items">
               <a class="like-link" href="#">
                 <img class="favorite" src="images/favorite.svg" width="18" height="17" alt="В избранное">
-                <span class="visually-hidden">Добавить в избранное</span>
-                  <span class="counter-value">
+                <div class="visually-hidden">Добавить в избранное</div>
+                  <div class="counter-value">
                     <p class="counter-value-text">12</p>
-                  </span>
+                  </div>
               </a>
             </li>
           </ul>
@@ -89,85 +41,12 @@
           <a class="logo-link" href="https://htmlacademy.ru/"><img src="images/logo.svg" width="139" height="70" alt="Логотип Sedona"></a>
       </nav>
     </header>
-   
     <!-- Основное содержимое -->
     <main class="wrapper">
-      <!-- Скрипт модального окна -->
-      <script>
-        let plusButton = document.querySelector('.plus');
-        let plusButtonRight = document.querySelector('.plus-right');
-        
-        let minusButton = document.querySelector('.minus');
-        let minusButtonRight = document.querySelector('.minus-right');
-
-        let closeButton = document.querySelector('.close-modal-window');
-
-        let grownupsValue = document.getElementById('grownups');
-        let childrenValue = document.getElementById('children');
-
-        let openPopUp = document.querySelector('.choose-date-button');
-        let modalWindow = document.querySelector('.modal-window');
-
-        let miniPopUp = document.querySelector('.pop-up-window');
-        let infoIcon = document.querySelector('.information-icon');
-
-        // Вызов всплывающего окна
-
-        openPopUp.addEventListener('click', ()=> {
-          modalWindow.classList.remove('visually-hidden');
-        })
-
-        // Закрываем всплывающее окно
-
-        closeButton.addEventListener('click', ()=> {
-          modalWindow.classList.add('visually-hidden');
-        })
-
-        // Мини всплывающее окно
-
-        infoIcon.addEventListener('mouseover', ()=> {
-            miniPopUp.classList.remove('visually-hidden');
-        })
-
-        // Закрываем мини всплывающее окно
-
-        infoIcon.addEventListener('mouseleave', ()=> {
-          miniPopUp.classList.add('visually-hidden');
-        })
-
-        plusButton.addEventListener('click', ()=> {
-          let numberGrownups = Number(grownupsValue.value);
-          grownupsValue.value = numberGrownups + 1;
-        })
-
-        minusButton.addEventListener('click', ()=> {
-          if (grownupsValue.value < 1) {
-            grownupsValue.value = 0;
-          } else {
-            let numberGrownups = Number(grownupsValue.value);
-            grownupsValue.value = numberGrownups - 1;
-          }
-        })
-
-        plusButtonRight.addEventListener('click', ()=> {
-          let numberChildren = Number(childrenValue.value);
-          childrenValue.value = numberChildren + 1;
-        })
-
-        minusButtonRight.addEventListener('click', ()=> {
-          if (childrenValue.value < 1) {
-            childrenValue.value = 0;
-          } else {
-            let numberChildren = Number(childrenValue.value);
-            childrenValue.value = numberChildren - 1;
-          }
-        })
-
-      </script>
       <h1 class="visually-hidden">Информация о городке Седона</h1>
       <!-- Первый экран, Слоган Седона и фон -->
       <header class="first-screen">
-        <img src="images/welcome.svg" width="188" height="45" alt="Добро пожаловать">
+        <img src="images/welcome.svg" width="218" height="55" alt="Добро пожаловать">
         <img src="images/gorgeous.svg" width="256" height="29"  alt="Добро пожаловать">
         <img src="images/sedona.svg" width="456" height="212" alt="Слоган Седона">
       <!-- Картинка Divider под превым экраном -->
@@ -228,7 +107,7 @@
               производства!
             </p>
           </li>
-          <!-- Преимущества, третий ряд -->
+          <!-- Преимущества, третий ряд --> 
           <li class="second-advantages-img">
             <img  src="images/second-advantages.jpg" width="800" height="384" alt="Мост дьявола">
           </li>
@@ -275,12 +154,12 @@
             <br>
             <p>
               Большинство едет в Гранд<br> 
-              Каньон и толпится там<br> 
-              разумеется
+              Каньон и толпится там
             </p>
           </li>
         </ol>
       </section>
+
       <!-- Блок "Заинтересовались?", сссылка на выбор даты поездки -->
       <section class="interesting">
         <h2 class="visually-hidden">
@@ -335,5 +214,53 @@
         <a href="https://htmlacademy.ru/" class="footer-logo-link"></a>
       </section>
     </footer>
+    
+    <!-- Всплывающее окно -->
+    <div class="modal-window visually-hidden">
+      <div class="modal-window-content">
+        <div class="modal-header-container">
+          <p class="modal-header">Поиск гостиницы в Седоне</p>
+          <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
+        </div>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset>
+            <span class="checkin-date">
+              <label for="checkin" class="modal-header-inside">Дата заезда:</label><input type="date" id="checkin" class="checkin">
+            </span>
+            <span class="checkout-date">
+              <label for="checkout" class="modal-header-inside">Дата выезда:</label><input type="date" id="checkout" class="checkout">
+            </span>
+            <div class="people-quantity">
+              <label for="grownups" class="modal-header-inside">Взрослые:</label>
+              <div class="people-quantity-right">
+                <span class="wrapper-for-plus-minus">
+                  <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                  <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                  <input type="number" id="grownups" class="grownups" value="1">
+                </span>
+                <div class="children-number">
+                  <span class="pop-up-window visually-hidden">
+                    <span class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                      возраст которых от 6 до 18 лет. 
+                      Дети до 6 лет размещаются бесплатно.</span>
+                    <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+                    </span>
+                  <label for="children" class="modal-header-inside">Дети:</label>
+                  <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+                  <span class="wrapper-for-plus-minus">
+                    <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                    <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                    <input type="number" id="children" class="children" value="0">
+                  </span>
+                </div>
+              </div>
+            </div>
+              <button class="dark-button-outline">Найти</button>
+            </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- Скрипт модального окна -->
+    <script src="js/script.js"></script>
   </body>
 </html>
