@@ -4,58 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
-   <!-- Всплывающее окно -->
-
-   <div class="modal-window visually-hidden">
-    <div class="modal-window-content">
-      <span class="modal-header-container">
-        <legend class="modal-header">Поиск гостиницы в Седоне</legend>
-        <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
-      </span>
-      <form action="" method="post">
-      <fieldset>
-        <span class="checkin-date input-outline">
-          <label for="checkin"><p class="modal-header-inside">Дата заезда:</p></label><input type="date" id="checkin">
-        </span>
-        <span class="checkout-date input-outline">
-          <label for="checkout"><p class="modal-header-inside">Дата выезда:</p></label><input type="date" id="checkout">
-        </span>
-        <span class="people-quantity">
-          <label for="grownups"><p class="modal-header-inside">Взрослые:</p></label>
-          <span class="people-quantity-right">
-            <span class="wrapper-for-plus-minus">
-              <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше">
-              <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше">
-              <input type="number" id="grownups" value="1">
-            </span>
-            <span class="children-number">
-              <div class="pop-up-window visually-hidden">
-                <p class="text-pop-up">Укажите количество детей, которые будут с вами, 
-                  возраст которых от 6 до 18 лет. 
-                  Дети до 6 лет размещаются бесплатно.</p>
-                <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
-              </div>
-              <label for="children"><p class="modal-header-inside">Дети:</p></label>
-              <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
-              <span class="wrapper-for-plus-minus">
-                <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше">
-                <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше">
-                <input type="number" id="children" value="0">
-              </span>
-            </span>
-          </span>
-        </span>
-        <button class="dark-button-outline">Найти</button>
-      </fieldset>
-      </form>
-    </div>
-  </div>
-
-
     <!-- Шапка, главное меню, навигация -->
     <header class="top-menu">
         <nav class="navigation">
@@ -92,95 +44,21 @@
         </nav>
       </header>
       <main class="catalog-wrapper">
-
-       <!-- Скрипт всплывающего окна -->
-      <script>
-        let plusButton = document.querySelector('.plus');
-        let plusButtonRight = document.querySelector('.plus-right');
-        
-        let minusButton = document.querySelector('.minus');
-        let minusButtonRight = document.querySelector('.minus-right');
-
-        let closeButton = document.querySelector('.close-modal-window');
-
-        let grownupsValue = document.getElementById('grownups');
-        let childrenValue = document.getElementById('children');
-
-        let openPopUp = document.querySelector('.choose-date-button');
-        let modalWindow = document.querySelector('.modal-window');
-
-        let miniPopUp = document.querySelector('.pop-up-window');
-        let infoIcon = document.querySelector('.information-icon');
-
-        // Вызов всплывающего окна
-
-        openPopUp.addEventListener('click', ()=> {
-          modalWindow.classList.remove('visually-hidden');
-        })
-
-        // Закрываем всплывающее окно
-
-        closeButton.addEventListener('click', ()=> {
-          modalWindow.classList.add('visually-hidden');
-        })
-
-        // Мини всплывающее окно
-
-        infoIcon.addEventListener('mouseover', ()=> {
-            miniPopUp.classList.remove('visually-hidden');
-        })
-
-        // Закрываем мини всплывающее окно
-
-        infoIcon.addEventListener('mouseleave', ()=> {
-          miniPopUp.classList.add('visually-hidden');
-        })
-
-        plusButton.addEventListener('click', ()=> {
-          let numberGrownups = Number(grownupsValue.value);
-          grownupsValue.value = numberGrownups + 1;
-        })
-
-        minusButton.addEventListener('click', ()=> {
-          if (grownupsValue.value < 1) {
-            grownupsValue.value = 0;
-          } else {
-            let numberGrownups = Number(grownupsValue.value);
-            grownupsValue.value = numberGrownups - 1;
-          }
-        })
-
-        plusButtonRight.addEventListener('click', ()=> {
-          let numberChildren = Number(childrenValue.value);
-          childrenValue.value = numberChildren + 1;
-        })
-
-        minusButtonRight.addEventListener('click', ()=> {
-          if (childrenValue.value < 1) {
-            childrenValue.value = 0;
-          } else {
-            let numberChildren = Number(childrenValue.value);
-            childrenValue.value = numberChildren - 1;
-          }
-        })
-
-      </script>
-
         <h1 class="visually-hidden">
           Каталог гостиниц Седоны
         </h1>
           <!-- Основной фильтр для настройки поиска гостиницы -->
         <header class="first-screen-catalog">
             <section class="select-hotels">
-                <p class="first-screen-header">Гостиницы седоны</p>
+                <p class="first-screen-header">Гостиницы Cедоны</p>
                 <span class="breadcrumbs">
                    <a href="index.html"><img src="images/catalog-images/home-breadcrumbs.svg" width="12" height="12" alt="Домой"></a>
                    <img src="images/catalog-images/nav-arrov.svg" width="5" height="7" alt="Стрелка">
-                   <a href="catalog.html">Каталог</a>
+                   <a href="catalog.html">Гостиницы</a>
                 </span>
                 <div class="headers-to-list">
-                   <p class="header-filter-list">Тип жилья:</p>
                    <p class="header-filter-list">Инфраструктура:</p>
+                   <p class="header-filter-list">Тип жилья:</p>
                 </div>
                 <div class="selectors">
                   <ul class="checkbox-list">
@@ -190,8 +68,8 @@
                   </ul>
                   <ul class="button-list">
                       <li class="infrastructure"><span class="radio-wrapper"><input type="radio" class="radio" id="radio-1" checked><div class="radio-active"></div></span><label for="radio-1">Гостиница</label></li>
-                      <li class="infrastructure"><span class="radio-wrapper"><input type="radio" class="radio" id="radio-2"><div class="radio-active"></div></span><label for="radio-2">Отель</label></li>
-                      <li class="infrastructure"><span class="radio-wrapper"><input type="radio" class="radio" id="radio-3"><div class="radio-active"></div></span><label for="radio-3">Аппартаменты</label></li>
+                      <li class="infrastructure"><span class="radio-wrapper"><input type="radio" class="radio" id="radio-2"><div class="radio-active"></div></span><label for="radio-2">Мотель</label></li>
+                      <li class="infrastructure"><span class="radio-wrapper"><input type="radio" class="radio" id="radio-3"><div class="radio-active"></div></span><label for="radio-3">Апартаменты</label></li>
                   </ul>
                 </div>
             </section>
@@ -213,71 +91,7 @@
                 <br>
                 <input class="button-clear blue-button-outline" type="button" value="Сбросить">
               </div>
-              <script>
-                let leftRange = document.querySelector('.range-left');
-                let rightRange = document.querySelector('.range-right');
-                let rangeTrack = document.querySelector('.range-track');
-                let rangeTrackActive = document.querySelector('.range-track-active');
-
-                let priceFrom = document.querySelector('.price-from');
-                let priceTo = document.querySelector('.price-to');
-
-                priceFrom.value = leftRange.value;
-                priceTo.value = rightRange.value;
-                rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
-                rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
-
-                let priceDifference = 1000;
-
-                rightRange.addEventListener('click', () => {
-                  if (priceTo.value - priceFrom.value <= priceDifference) {
-                    let numberPriceFromValue = parseInt(priceFrom.value);
-                    rangeTrackActive.style.right = 100 - ((numberPriceFromValue + priceDifference) / rightRange.max) * 100 + '%';
-                    console.log('change');
-                  }
-                });
-
-                priceFrom.onchange = function() {
-                  if (priceTo.value-priceFrom.value <= priceDifference) {
-                    let numberPriceToValue = parseInt(priceTo.value);
-                    priceFrom.value = numberPriceToValue - priceDifference;
-                  }
-                  leftRange.value = priceFrom.value;
-                  rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
-                }
-
-                priceTo.onchange = function() {
-                  // console.log(priceTo.value-priceFrom.value);
-                  if (priceTo.value-priceFrom.value <= priceDifference) {
-                    let numberPriceFromValue = parseInt(priceFrom.value);
-                    priceTo.value = numberPriceFromValue + priceDifference;
-                  }
-                  rightRange.value = priceTo.value;
-                  rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
-                }
-
-                leftRange.addEventListener('input', () => {
-                  if (rightRange.value - leftRange.value < priceDifference) {
-                    priceFrom.value = priceTo.value - priceDifference;
-                    leftRange.value = rightRange.value - priceDifference;
-                  } else {
-                    priceFrom.value = leftRange.value; 
-                    rangeTrackActive.style.left = (priceFrom.value / leftRange.max) * 100 + '%';
-                  }
-                });
-
-                rightRange.addEventListener('input', () => {
-                  let numberPriceFromValue = parseInt(priceFrom.value);
-                  let numberLeftRangeValue = parseInt(leftRange.value);
-                  if (rightRange.value - leftRange.value < priceDifference) {
-                    priceTo.value = numberPriceFromValue + priceDifference;
-                    rightRange.value = numberLeftRangeValue + priceDifference;
-                  } else {
-                    priceTo.value = rightRange.value; 
-                    rangeTrackActive.style.right = 100 - (priceTo.value / rightRange.max) * 100 + '%';
-                  }
-                });
-              </script>
+              <script src="js/catalog-range.js"></script>
             </section>
         </header>
         <!-- Каталог гостиниц, выбор гостиницы -->
@@ -288,8 +102,8 @@
             <!-- Шапка над списком каталога с фильтрами -->
             <div class="avaliable-hotels-header">
                 <p>Найдено гостиниц: 38</p>
-
-                <select name="filter-hotels" id="filter-hotels" class="input-outline">
+              <div class="hotels-header-right">
+                <select name="filter-hotels" class="filter-hotels input-outline">
                     <option value="">Сначала дешёвые</option>
                     <option value="">Рейтинг по возратсанию</option>
                 </select>
@@ -299,6 +113,7 @@
                     <a href="#" class="display-options display-icon"><img  src="images/catalog-images/display-big.svg" width="16" height="14" alt="На всю ширину"></a>
                     <a href="#" class="display-options display-icon"><img  src="images/catalog-images/list.svg" width="16" height="14" alt="Отобразить списком"></a>
                 </div>
+              </div>
             </div>
 
             <ul class="hotels-list">
@@ -307,7 +122,7 @@
                     <h3 class="hotel-header">Amara Resort & Spa</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
-                        <p>от 4000 р</p>
+                        <p>От 4000 р</p>
                     </div>
                     <div class="hotels-button">
                         <input type="button" value="Подробнее" class="more-btn blue-button-outline">
@@ -328,7 +143,7 @@
                     <h3 class="hotel-header">Desert Quail Inn</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
-                        <p>от 3000 р</p>
+                        <p>От 3000 р</p>
                     </div>
                     <div class="hotels-button">
                         <input type="button" value="Подробнее" class="more-btn blue-button-outline">
@@ -348,7 +163,7 @@
                     <h3 class="hotel-header">Villas at Poco Diablo</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
-                        <p>от 2000 р</p>
+                        <p>От 2000 р</p>
                     </div>
                     <div class="hotels-button">
                         <input type="button" value="Подробнее" class="more-btn blue-button-outline">
@@ -367,7 +182,7 @@
                     <h3 class="hotel-header">GreenTree Inn</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
-                        <p>от 3000 р</p>
+                        <p>От 3000 р</p>
                     </div>
                     <div class="hotels-button">
                         <input type="button" value="Подробнее" class="more-btn blue-button-outline">
@@ -384,9 +199,7 @@
             </ul>
             <!-- Кнопка загрузить больше -->
             <span class="load-more-container">
-            <!-- <img src="images/catalog-images/divider.svg" class="divider" width="1055" height="1" alt=""> -->
             <button class="dark-button-outline load-more">Загрузить ещё</button>
-            <!-- <img src="images/catalog-images/divider.svg" class="divider" width="1055" height="1" alt=""> -->
             </span>
         </section>
         <!-- Нуммерация страниц -->
@@ -408,13 +221,13 @@
             </select>
         </section>
         <!-- Подписка на рассылку -->
-        <section class="subscribes">
+        <section class="catalog-subscribes">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <p class="catalog-paragraph-header">Подпишитесь на рассылку</p>
             <p>Только полезная информация и никакого спама,<br>
               честное бойскаутское!</p>
-              <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input type="text" name="email-sending" placeholder="Ваш e-mail" class="email input-outline"><button class="subscribe-button dark-button-outline">Подписаться</button>
+              <form class="catalog-email-form" action="https://echo.htmlacademy.ru/" method="post">
+                <input type="text" name="email-sending" placeholder="Ваш e-mail" class="catalog-email input-outline"><button class="catalog-subscribe-button dark-button-outline">Подписаться</button>
               </form>
           </section>
       </main>
@@ -449,6 +262,52 @@
           <a href="https://htmlacademy.ru/" class="footer-logo-link"></a>
         </section>
       </footer>
-
+      <!-- Всплывающее окно -->
+      <div class="modal-window visually-hidden">
+        <div class="modal-window-content">
+          <div class="modal-header-container">
+            <p class="modal-header">Поиск гостиницы в Седоне</p>
+            <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
+          </div>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset>
+              <span class="checkin-date">
+                <label for="checkin" class="modal-header-inside">Дата заезда:</label><input type="date" id="checkin" class="checkin">
+              </span>
+              <span class="checkout-date">
+                <label for="checkout" class="modal-header-inside">Дата выезда:</label><input type="date" id="checkout" class="checkout">
+              </span>
+              <div class="people-quantity">
+                <label for="grownups" class="modal-header-inside">Взрослые:</label>
+                <div class="people-quantity-right">
+                  <span class="wrapper-for-plus-minus">
+                    <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                    <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                    <input type="number" id="grownups" class="grownups" value="1">
+                  </span>
+                  <div class="children-number">
+                    <span class="pop-up-window visually-hidden">
+                      <span class="text-pop-up">Укажите количество детей, которые будут с вами, 
+                        возраст которых от 6 до 18 лет. 
+                        Дети до 6 лет размещаются бесплатно.</span>
+                      <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+                      </span>
+                    <label for="children" class="modal-header-inside">Дети:</label>
+                    <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+                    <span class="wrapper-for-plus-minus">
+                      <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
+                      <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                      <input type="number" id="children" class="children" value="0">
+                    </span>
+                  </div>
+                </div>
+              </div>
+                <button class="dark-button-outline">Найти</button>
+              </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- Скрипт модального окна -->
+      <script src="js/script.js"></script>
   </body>
 </html>
