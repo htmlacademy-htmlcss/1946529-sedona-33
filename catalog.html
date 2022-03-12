@@ -205,12 +205,12 @@
         <!-- Нуммерация страниц -->
         <section class="page-pagination">
             <ol class="page-pagination-list">
-                <a href="#" class="dark-button-outline page-pagination-item"><li>1</li></a>
-                <a href="#" class="dark-button-outline page-pagination-item"><li>2</li></a>
-                <a href="#" class="dark-button-outline page-pagination-item"><li>3</li></a>
-                <a href="#" class="dark-button-outline page-pagination-item"><li>4</li></a>
-                <a href="#" class="dark-button-outline page-pagination-item"><li>...</li></a>
-                <a href="#" class="dark-button-outline page-pagination-item"><li>10</li></a>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">1</span></a></li>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">2</span></a></li>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">3</span></a></li>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">4</span></a></li>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">...</span></a></li>
+                <li class="dark-button-outline"><a href="#" class="page-pagination-item"><span class="pagination-number">10</span></a></li>
             </ol>
             <p>Гостиниц на странице:</p>
             <select name="page-numbers-list" id="quantity-of-pages" class="quantity-of-pages input-outline">
@@ -223,7 +223,7 @@
         <!-- Подписка на рассылку -->
         <section class="catalog-subscribes">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
-            <p class="catalog-paragraph-header">Подпишитесь на рассылку</p>
+            <p class="catalog-catalog-paragraph-header">Подпишитесь на рассылку</p>
             <p>Только полезная информация и никакого спама,<br>
               честное бойскаутское!</p>
               <form class="catalog-email-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -267,10 +267,10 @@
         <div class="modal-window-content">
           <div class="modal-header-container">
             <p class="modal-header">Поиск гостиницы в Седоне</p>
-            <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" alt="">
+            <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" width="53" height="53" alt="">
           </div>
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset>
+            <fieldset class="modal-fieldset">
               <span class="checkin-date">
                 <label for="checkin" class="modal-header-inside">Дата заезда:</label><input type="date" id="checkin" class="checkin">
               </span>
@@ -290,10 +290,10 @@
                       <span class="text-pop-up">Укажите количество детей, которые будут с вами, 
                         возраст которых от 6 до 18 лет. 
                         Дети до 6 лет размещаются бесплатно.</span>
-                      <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" alt="">
+                      <img class="pop-up-img" src="images/catalog-images/pop-up-window-info.svg" width="295" height="202" alt="">
                       </span>
                     <label for="children" class="modal-header-inside">Дети:</label>
-                    <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" alt="">
+                    <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" width="23" height="23" alt="">
                     <span class="wrapper-for-plus-minus">
                       <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
                       <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
@@ -302,7 +302,7 @@
                   </div>
                 </div>
               </div>
-                <button class="dark-button-outline">Найти</button>
+                <button class="dark-button-outline modal-search">Найти</button>
               </fieldset>
           </form>
         </div>

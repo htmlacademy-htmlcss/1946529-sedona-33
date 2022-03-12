@@ -99,6 +99,10 @@ body {
     color: rgb(255, 255, 255, 0.3);
 }
 
+.dark-button-outline:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 .light-button-outline:focus {
     border: 3px solid #ffffff;
 }
@@ -109,7 +113,7 @@ body {
 
 .blue-button-outline:focus {
     border: 3px solid #83B3D3;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .blue-button-outline:active {
@@ -181,6 +185,10 @@ body {
 
 .choose-date-button:active {
     color: rgba(255, 255, 255, 0.3);
+}
+
+.choose-date-button:hover {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .navigation-user {
@@ -398,13 +406,12 @@ body {
 
 .pop-up-window {
     position: absolute;
-    right: 88px;
-    bottom: -30px;
+    right: 83px;
+    bottom: -15px;
 }
 
 .pop-up-img {
     z-index: 1;
-
 }
 
 .text-pop-up {
@@ -437,9 +444,9 @@ body {
     border: none;
     margin: 40px 0 0 0;
     cursor: pointer;
-} 
+}
 
-fieldset {
+.modal-fieldset {
     padding: 0;
     border: 0;
 }
@@ -710,10 +717,10 @@ fieldset {
     color: #333333;
     text-transform: none;
     padding: 0;
+    margin-bottom: 57px;
 }
 
 .search-hotels {
-    box-sizing: border-box;
     min-width: 575px;
     max-width: 700px;
     text-transform: uppercase;
@@ -723,12 +730,19 @@ fieldset {
     line-height: 36px;
     letter-spacing: 0em;
     color: #FFFFFF;
-    display: inline-block;
     text-decoration: none;
     background-color: #756257;
     padding: 15px 150px;
     border-radius: 10px;
     margin: 37px 0 10px 0;
+}
+
+.search-hotels:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
+.search-hotels:active {
+    color: rgb(255, 255, 255, 0.3);
 }
 
 /* Раздел подписка */
@@ -810,6 +824,10 @@ fieldset {
     cursor: pointer;
 }
 
+.subscribe-button:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 /* Футер, соцсети, контакты, лого */
 
 .footer-wrapper {
@@ -880,6 +898,20 @@ fieldset {
     opacity: 0.3;
 }
 
+.footer-twitter:hover::after {
+    content: "";
+    background: url('../images/social-twitter.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 12px;
+    opacity: 0.6;
+}
+
 .footer-facebook::after {
     position: absolute;
     top: 50%;
@@ -919,6 +951,20 @@ fieldset {
     width: 10px;
     height: 18px;
     opacity: 0.3;
+    padding: 11px 15px;
+}
+
+.footer-facebook:hover::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/social-facebook.svg') no-repeat center;
+    width: 10px;
+    height: 18px;
+    opacity: 0.6;
     padding: 11px 15px;
 }
 
@@ -964,6 +1010,20 @@ fieldset {
     opacity: 0.3;
 }
 
+.footer-youtube:hover::after {
+    content: "";
+    background: url('../images/social-youtube.svg') no-repeat center;
+    width: 18px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 11px 12px;
+    opacity: 0.6;
+}
+
 .phone-number {
     justify-self: center;
     font-size: 40px;
@@ -978,6 +1038,10 @@ fieldset {
     text-decoration: none;
     color: #000000;
     text-align: center;
+}
+
+.phone-number-link:hover {
+    color: #756257;
 }
 
 .footer-logo {
@@ -1020,6 +1084,18 @@ fieldset {
     width: 115px;
     height: 33px;
     opacity: 0.3;
+}
+
+.footer-logo-link:hover::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    background: url('../images/footer-logo.svg') no-repeat left center;
+    width: 115px;
+    height: 33px;
+    opacity: 0.8;
 }
 
 
@@ -1443,6 +1519,10 @@ fieldset {
     cursor: pointer;
 }
 
+.button-go:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 .button-clear {
     font-size: 18px;
     font-style: normal;
@@ -1457,6 +1537,10 @@ fieldset {
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+.button-clear:hover {
+    color: rgb(255, 255, 255, 0.6);
 }
 
 
@@ -1630,6 +1714,10 @@ fieldset {
     cursor: pointer;
 }
 
+.more-btn:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 .favorite-btn {
     width: 140px;
     height: 37px;
@@ -1646,6 +1734,10 @@ fieldset {
     cursor: pointer;
 }
 
+.favorite-btn:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 .favorite-btn-active {
     width: 140px;
     height: 37px;
@@ -1660,6 +1752,10 @@ fieldset {
     color: #FFFFFF;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.favorite-btn-active:hover {
+    color: rgb(255, 255, 255, 0.6);
 }
 
 .hotel-rating {
@@ -1721,6 +1817,10 @@ fieldset {
     margin: 30px auto;
 }
 
+.load-more:hover {
+    color: rgb(255, 255, 255, 0.6);
+}
+
 .page-pagination {
     display: grid;
     grid-template-columns: 2fr auto auto;
@@ -1740,12 +1840,55 @@ fieldset {
     padding: 0; 
 }
 
-.page-pagination-item {
+.page-pagination-list li {
+    list-style-type: none;
+}
+
+.pagination-number {
     overflow: hidden;
-    box-sizing: border-box;
     display: block;
-    position: relative;
-    margin: 0;
+    min-width: 55px;
+    height: 55px;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-right: 7px;
+    padding-top: 15px;
+}
+
+.pagination-number:hover {
+    overflow: hidden;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-right: 7px;
+    padding-top: 15px;
+    background-color: #F2F2F2;
+}
+
+.pagination-number:active {
+    overflow: hidden;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-right: 7px;
+    padding-top: 12px;
+    background-color: #F2F2F2;
+    border: 3px solid #756257;
+}
+
+
+.page-pagination-item {
+    box-sizing: border-box;
     text-decoration: none;
     color: #FFFFFF;
     font-size: 20px;
@@ -1754,17 +1897,10 @@ fieldset {
     line-height: 26px;
     letter-spacing: 0em;
     background-color: #83B3D3;
-    border-radius: 4px;
-    margin-right: 7px;
-    min-width: 55px;
-    height: 55px;
 }
 
 .page-pagination-item:hover {
-    overflow: hidden;
-    display: block;
-    position: relative;
-    margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
     color: #000000;
     font-size: 20px;
@@ -1773,17 +1909,10 @@ fieldset {
     line-height: 26px;
     letter-spacing: 0em;
     background-color: #F2F2F2;
-    border-radius: 4px;
-    margin-right: 7px;
-    min-width: 55px;
-    height: 55px;
 }
 
 .page-pagination-item:active {
-    overflow: hidden;
-    display: block;
-    position: relative;
-    margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
     color: #000000;
     font-size: 20px;
@@ -1792,21 +1921,6 @@ fieldset {
     line-height: 26px;
     letter-spacing: 0em;
     background-color: #F2F2F2;
-    border-radius: 4px;
-    margin-right: 7px;
-    min-width: 55px;
-    height: 55px;
-}
-
-.page-pagination-item li {
-    position: absolute;
-    vertical-align: middle;
-    margin: auto 0;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    list-style-type: none;
 }
 
 .page-pagination p {
@@ -1852,7 +1966,7 @@ fieldset {
 
 }
 
-.catalog-paragraph-header {
+.catalog-catalog-paragraph-header {
     margin: 0;
     font-size: 30px;
     font-style: normal;
@@ -1914,6 +2028,10 @@ fieldset {
     line-height: 26px;
     letter-spacing: 0em;
     cursor: pointer;
+}
+
+.catalog-subscribe-button:hover {
+    color: rgb(255, 255, 255, 0.6);
 }
 
 
