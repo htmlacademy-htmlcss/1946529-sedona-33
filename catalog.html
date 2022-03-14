@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="icon" sizes="32x32" href="favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
@@ -25,13 +26,13 @@
             <ul class="navigation-list navigation-user">
               <li class="user-items">
                 <a class="search-link" href="#">
-                  <img class="search" src="images/search-icon.svg" width="18" height="18" alt="Поиск">
+                  <img class="search" src="images/search-icon.svg" width="18" height="18" alt="Поиск.">
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="user-items">
                 <a class="like-link" href="#">
-                  <img class="favorite" src="images/favorite.svg" width="18" height="17" alt="В избранное">
+                  <img class="favorite" src="images/favorite.svg" width="18" height="17" alt="В избранное.">
                   <div class="visually-hidden">Добавить в избранное</div>
                     <div class="counter-value">
                       <p class="counter-value-text">12</p>
@@ -40,7 +41,7 @@
               </li>
             </ul>
             <button class="choose-date-button">Хочу сюда!</button>
-            <a class="logo-link" href="https://htmlacademy.ru/"><img src="images/logo.svg" width="139" height="70" alt="Логотип Sedona"></a>
+            <a class="logo-link" href="https://htmlacademy.ru/"><img src="images/logo.svg" width="139" height="70" alt="Логотип Sedona."></a>
         </nav>
       </header>
       <main class="catalog-wrapper">
@@ -52,26 +53,26 @@
             <section class="select-hotels">
                 <p class="first-screen-header">Гостиницы Cедоны</p>
                 <span class="breadcrumbs">
-                   <a href="index.html"><img src="images/catalog-images/home-breadcrumbs.svg" width="12" height="12" alt="Домой"></a>
-                   <img src="images/catalog-images/nav-arrov.svg" width="5" height="7" alt="Стрелка">
+                   <a href="index.html"><img src="images/catalog-images/home-breadcrumbs.svg" width="12" height="12" alt="Домой."></a>
+                   <img src="images/catalog-images/nav-arrov.svg" width="5" height="7" alt="Стрелка.">
                    <a href="catalog.html">Гостиницы</a>
                 </span>
                 <div class="headers-to-list">
                    <p class="header-filter-list">Инфраструктура:</p>
                    <p class="header-filter-list">Тип жилья:</p>
                 </div>
-                <div class="selectors">
+                <form action="https://echo.htmlacademy.ru/" method="post" class="selectors">
                   <ul class="checkbox-list">
                       <li class="type-of-hotels"><div class="checkbox-wrapper"><input type="checkbox" class="checkbox" id="checkbox-1" checked><div class="arrow"></div></div><label for="checkbox-1">Бассейн</label></li>
                       <li class="type-of-hotels"><div class="checkbox-wrapper"><input type="checkbox" class="checkbox" id="checkbox-2"><div class="arrow"></div></div><label for="checkbox-2">Парковка</label></li>
                       <li class="type-of-hotels"><div class="checkbox-wrapper"><input type="checkbox" class="checkbox" id="checkbox-3"><div class="arrow"></div></div><label for="checkbox-3">Wi-Fi</label></li>
                   </ul>
                   <ul class="button-list">
-                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" class="radio" id="radio-1" checked><div class="radio-active"></div></div><label for="radio-1">Гостиница</label></li>
-                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" class="radio" id="radio-2"><div class="radio-active"></div></div><label for="radio-2">Мотель</label></li>
-                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" class="radio" id="radio-3"><div class="radio-active"></div></div><label for="radio-3">Апартаменты</label></li>
+                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" value="hostel" name="hotels" class="radio" id="radio-1" checked><div class="radio-active"></div></div><label for="radio-1">Гостиница</label></li>
+                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" value="motel" name="hotels" class="radio" id="radio-2"><div class="radio-active"></div></div><label for="radio-2">Мотель</label></li>
+                      <li class="infrastructure"><div class="radio-wrapper"><input type="radio" value="appartments" name="hotels" class="radio" id="radio-3"><div class="radio-active"></div></div><label for="radio-3">Апартаменты</label></li>
                   </ul>
-                </div>
+                </form>
             </section>
             <section class="select-price">
               <div class="price-range">
@@ -82,16 +83,15 @@
                   <div class="range-track">
                     <div class="range-track-active"></div>
                   </div>
-                  <input class="range-left range" type="range" min="0" max="9000" step="100" value="2500">
-                  <input class="range-right range" type="range" min="0" max="9000" step="100" value="7500">
+                  <input class="range-left range" type="range" min="0" max="9000" step="100" value="2500" required>
+                  <input class="range-right range" type="range" min="0" max="9000" step="100" value="7500" required>
                 </div>
               </div>
               <div class="price-button">
-                <input class="button-go light-button-outline" type="button" value="Применить">
+                <input class="button-go light-button-outline" type="submit" value="Применить">
                 <br>
-                <input class="button-clear blue-button-outline" type="button" value="Сбросить">
+                <input class="button-clear blue-button-outline" type="submit" value="Сбросить">
               </div>
-              <script src="js/catalog-range.js"></script>
             </section>
         </header>
         <!-- Каталог гостиниц, выбор гостиницы -->
@@ -109,89 +109,88 @@
                 </select>
                 <!-- настройка фида списка гостиниц -->
                 <div class="show-how">
-                    <a href="#" class="display-options-active display-icon"><img  src="images/catalog-images/plitka.svg" width="16" height="14" alt="Отобразить плиткой"></a>
-                    <a href="#" class="display-options display-icon"><img  src="images/catalog-images/display-big.svg" width="16" height="14" alt="На всю ширину"></a>
-                    <a href="#" class="display-options display-icon"><img  src="images/catalog-images/list.svg" width="16" height="14" alt="Отобразить списком"></a>
+                    <a href="#" class="display-options-active display-icon"><img  src="images/catalog-images/plitka.svg" width="16" height="14" alt="Отобразить плиткой."></a>
+                    <a href="#" class="display-options display-icon"><img  src="images/catalog-images/display-big.svg" width="16" height="14" alt="На всю ширину."></a>
+                    <a href="#" class="display-options display-icon"><img  src="images/catalog-images/list.svg" width="16" height="14" alt="Отобразить списком."></a>
                 </div>
               </div>
             </div>
-
             <ul class="hotels-list">
                 <li class="hotels-items">
-                    <img src="images/catalog-images/first-hotel.jpg" width="299" height="220" alt="Amara Resort & Spa">
+                    <img src="images/catalog-images/first-hotel.jpg" width="299" height="220" alt="Amara Resort & Spa.">
                     <h3 class="hotel-header">Amara Resort & Spa</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
                         <p>От 4000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
-                        <input type="button" value="В избранное" class="favorite-btn dark-button-outline">
+                        <a class="more-btn blue-button-outline">Подробнее</a>
+                        <a class="favorite-btn dark-button-outline">В избранное</a>
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
                       </div>
                         <p>Рейтинг: 8,5</p>
                     </div>
                 </li>
                 <li class="hotels-items">
-                    <img src="images/catalog-images/second-hotel.jpg" width="309" height="220" alt="Desert Quail Inn">
+                    <img src="images/catalog-images/second-hotel.jpg" width="309" height="220" alt="Desert Quail Inn.">
                     <h3 class="hotel-header">Desert Quail Inn</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
                         <p>От 3000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
-                        <input type="button" value="В избранное" class="favorite-btn dark-button-outline">
+                        <a class="more-btn blue-button-outline">Подробнее</a>
+                        <a class="favorite-btn dark-button-outline">В избранное</a>
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
                       </div>
                         <p>Рейтинг: 8,9</p>
                     </div>
                 </li>
                 <li class="hotels-items">
-                    <img src="images/catalog-images/third-hotel.jpg" width="308" height="220" alt="Villas at Poco Diablo">
+                    <img src="images/catalog-images/third-hotel.jpg" width="308" height="220" alt="Villas at Poco Diablo.">
                     <h3 class="hotel-header">Villas at Poco Diablo</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
                         <p>От 2000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
-                        <input type="button" value="В избранном" class="favorite-btn-active dark-button-outline">
+                        <a class="more-btn blue-button-outline">Подробнее</a>
+                        <a class="favorite-btn-active dark-button-outline">В избранном</a>
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
                       </div>
                         <p>Рейтинг: 9,2</p>
                     </div>
                 </li>
                 <li class="hotels-items">
-                    <img src="images/catalog-images/fourth-hotel.jpg" width="299" height="220" alt="GreenTree Inn">
+                    <img src="images/catalog-images/fourth-hotel.jpg" width="299" height="220" alt="GreenTree Inn.">
                     <h3 class="hotel-header">GreenTree Inn</h3>
                     <div class="price-hotel">
                         <p>Гостиница</p>
-                        <p>От 3000 р</p>
+                        <p>От 3 000 р</p>
                     </div>
                     <div class="hotels-button">
-                        <input type="button" value="Подробнее" class="more-btn blue-button-outline">
-                        <input type="button" value="В избранном" class="favorite-btn dark-button-outline">
+                        <a class="more-btn blue-button-outline">Подробнее</a>
+                        <a class="favorite-btn dark-button-outline">В избранное</a>
                     </div>
                     <div class="hotel-rating">
                       <div class="stars">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
-                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
+                        <img src="images/catalog-images/rating-star.svg" width="18" height="17" alt="Рейтинг.">
                       </div>
                         <p>Рейтинг: 9,2</p>
                     </div>
@@ -231,8 +230,7 @@
               </form>
           </section>
       </main>
-        
-           <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer-wrapper">
         <section class="social-networks">
           <ul class="social-networks-list">
@@ -267,7 +265,7 @@
         <div class="modal-window-content">
           <div class="modal-header-container">
             <p class="modal-header">Поиск гостиницы в Седоне</p>
-            <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" width="53" height="53" alt="">
+            <img class="close-modal-window" src="images/catalog-images/close-modal-window.svg" width="53" height="53" alt="Закрыть окно.">
           </div>
           <form action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="modal-fieldset">
@@ -281,8 +279,8 @@
                 <label for="grownups" class="modal-header-inside">Взрослые:</label>
                 <div class="people-quantity-right">
                   <span class="wrapper-for-plus-minus">
-                    <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
-                    <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                    <img class="minus" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше.">
+                    <img class="plus" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше.">
                     <input type="number" id="grownups" class="grownups" value="1">
                   </span>
                   <div class="children-number">
@@ -295,8 +293,8 @@
                     <label for="children" class="modal-header-inside">Дети:</label>
                     <img class="information-icon" src="images/catalog-images/date-infomation-icon.svg" width="23" height="23" alt="">
                     <span class="wrapper-for-plus-minus">
-                      <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="">
-                      <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="">
+                      <img class="minus-right" src="images/catalog-images/minus.svg" height="2" width="13" alt="Меньше.">
+                      <img class="plus-right" src="images/catalog-images/plus.svg" height="13" width="13" alt="Больше.">
                       <input type="number" id="children" class="children" value="0">
                     </span>
                   </div>
@@ -309,5 +307,6 @@
       </div>
       <!-- Скрипт модального окна -->
       <script src="js/script.js"></script>
+      <!-- <script src="js/catalog-range.js"></script> -->
   </body>
 </html>
