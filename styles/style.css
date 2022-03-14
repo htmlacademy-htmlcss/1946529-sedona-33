@@ -557,24 +557,25 @@ body {
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
-    padding: 98px 20px 25px 20px;
+    padding: 98px 20px 29px 20px;
 
 }
 
 .advantages p {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 18px;
-    padding: 0 30px;
+    line-height: 20px;
+    /* padding: 6px 30px 0; */
 }
 
 .advantages p:last-child {
     margin: 0 auto;
     display: block;
-    width: 230px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
+
+}
+
+.advantages-houses>.advantage-with-icon-text {
+    width: 180px;
 }
 
 .advantages-item {
@@ -583,6 +584,26 @@ body {
     width: 400px;
     min-height: 384px;
     color: #FFFFFF;
+}
+
+.advantages-item-text {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-top: 10px;
+}
+
+.advantages-souvenirs>.advantage-with-icon-text {
+    width: 210px;
+}
+
+.fourth-advantages>.advantages-item-text {
+    width: 230px;
+}
+
+.third-advantages>.advantages-item-text {
+    width: 230px;
 }
 
 .first-advantages {
@@ -618,8 +639,10 @@ body {
     color: #000000;
 }
 
-.advantage-with-icon p {
-    margin: 0 20px;
+.advantage-with-icon-text {
+    display: block;
+    margin: 0 auto;
+    width: 230px;
     padding-top: 20px;
     color: #333333;
 }
@@ -725,7 +748,7 @@ body {
     color: #333333;
     text-transform: none;
     padding: 0;
-    margin-bottom: 57px;
+    margin-bottom: 52px;
 }
 
 .search-hotels {
@@ -741,9 +764,9 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     background-color: #756257;
-    padding: 15px 0;
+    padding: 12px 0;
     border-radius: 10px;
-    margin: -20px 0 10px 0;
+    margin: -30px 0 10px 0;
 }
 
 .search-hotels:hover {
@@ -764,7 +787,7 @@ body {
     background-color: #7DB550;
     background: url('../images/subscribe-bg.jpg') no-repeat;
     text-align: center;
-    padding: 90px 50px;
+    padding: 95px 50px 90px;
     box-sizing: border-box;
     background-size: 100% 100%;
 }
@@ -781,7 +804,7 @@ body {
 }
 
 .subscribes p:last-of-type {
-    margin: 32px 0 45px;
+    margin: 29px 0 45px;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -826,7 +849,8 @@ body {
     background-color: #83B3D3;
     text-transform: uppercase;
     color: #FFFFFF;
-    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 26px;
@@ -848,7 +872,6 @@ body {
     background-color: #FFFFFF;
     margin: 0 auto;
     align-items: center;
-
 }
 
 .social-networks-list {
@@ -2018,7 +2041,7 @@ body {
 }
 
 .catalog-subscribes p:last-of-type {
-    margin: 28px 0 41px;
+    margin: 28px 0 45px;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
