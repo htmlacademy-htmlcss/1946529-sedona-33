@@ -2054,7 +2054,7 @@ body {
 }
 
 .catalog-catalog-paragraph-header {
-    margin: 0;
+    margin: -3px 0 32px;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
