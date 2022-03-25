@@ -174,7 +174,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 20px;
     letter-spacing: 0em;
     text-transform: uppercase;
@@ -523,7 +523,7 @@ body {
     line-height: 36px;
     color: #000000;
     text-transform: uppercase;
-    padding: 63px 50px 34px 50px;
+    padding: 63px 50px 31px 50px;
 }
 
 .advanages-header p:last-child {
@@ -565,8 +565,7 @@ body {
 .advantages p {
     font-size: 18px;
     font-weight: 400;
-    line-height: 20px;
-    /* padding: 6px 30px 0; */
+    line-height: 21px;
 }
 
 .advantages p:last-child {
@@ -726,7 +725,7 @@ body {
 
 .interesting {
     width: 1200px;
-    min-height: 417px;
+    min-height: 415px;
     background-color: #FFFFFF;
     text-align: center;
     margin: 0 auto;
@@ -1161,11 +1160,12 @@ body {
 }
 
 .first-screen-header {
-    margin: -5px 0 0;
+    margin: 0;
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
+    line-height: 77px;
     color: #FFFFFF;
 }
 
@@ -1174,6 +1174,7 @@ body {
 }
 
 .breadcrumbs {
+    margin-top: -5px;
     margin-left: 3px;
     display: flex;
     flex-wrap: nowrap;
@@ -1707,7 +1708,7 @@ body {
 
 .hotels-list {
     width: 1057px;
-    margin: 0 72px 68px;
+    margin: 20px 72px 38px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -1716,27 +1717,12 @@ body {
 }
 
 .hotels-items {
-    padding: 19px 20px 28px;
+    padding: 20px 20px 30px;
     width: 300px;
 }
 
-.hotels-items:nth-of-type(2) {
-    padding: 19px 20px;
-    width: 309px;
-}
-
-.hotels-items:nth-child(3) {
-    padding: 19px 20px;
-    width: 308px;
-}
-
-.hotels-items:nth-child(4) {
-    padding: 17px 20px;
-    width: 299px;
-}
-
 .hotels-items p {
-    margin: 0;
+    margin:  0 0;
 }
 
 .hotels-items h3 {
@@ -1755,8 +1741,9 @@ body {
 }
 
 .price-hotel p {
+    margin: 12px 0 0;
     box-sizing: border-box;
-    width: 155px;
+    width: 160px;
     padding-right: 30px;
     font-size: 18px;
     font-style: normal;
@@ -1847,6 +1834,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
+    height: auto;
 }
 
 .stars {
@@ -1860,10 +1848,11 @@ body {
 .hotel-rating p:last-child {
     box-sizing: border-box;
     width: 160px;
+    min-height: 37px;
     text-align: center;
     background-color: #F2F2F2;
     border-radius: 4px;
-    padding: 10px 10px;
+    padding: 9px 10px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1881,7 +1870,7 @@ body {
 .load-more-container {
     display: flex;
     width: 1055px;
-    height: 119px;
+    height: 118px;
     border-top: 1px solid #E6E6E6;
     border-bottom: 1px solid #E6E6E6;
     margin: -15px auto 0;
@@ -1902,7 +1891,7 @@ body {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
-    margin: 30px auto;
+    margin: 29px auto;
 }
 
 .load-more:hover {
@@ -1916,7 +1905,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     background-color: #FFFFFF;
-    padding: 25px 72px 0px 72px;
+    padding: 27px 72px 0px 72px;
     box-sizing: border-box;
     align-items: center;
 }
@@ -1954,7 +1943,7 @@ body {
     border-radius: 4px;
     text-align: center;
     box-sizing: border-box;
-    margin-right: 7px;
+    margin-right: 8px;
     padding-top: 15px;
     background-color: #F2F2F2;
 }
@@ -1968,7 +1957,7 @@ body {
     border-radius: 4px;
     text-align: center;
     box-sizing: border-box;
-    margin-right: 7px;
+    margin-right: 8px;
     padding-top: 12px;
     background-color: #F2F2F2;
     border: 3px solid #756257;
@@ -2051,12 +2040,12 @@ body {
     margin: 0 auto;
     background-color: #FFFFFF;
     text-align: center;
-    padding: 90px 0 140px;
+    padding: 75px 0 140px;
 
 }
 
 .catalog-catalog-paragraph-header {
-    margin: -3px 0 32px;
+    margin: -3px 0 45px;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
