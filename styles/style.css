@@ -523,7 +523,7 @@ body {
     line-height: 36px;
     color: #000000;
     text-transform: uppercase;
-    padding: 63px 50px 34px 50px;
+    padding: 63px 50px 31px 50px;
 }
 
 .advanages-header p:last-child {
@@ -565,8 +565,7 @@ body {
 .advantages p {
     font-size: 18px;
     font-weight: 400;
-    line-height: 20px;
-    /* padding: 6px 30px 0; */
+    line-height: 21px;
 }
 
 .advantages p:last-child {
@@ -726,7 +725,7 @@ body {
 
 .interesting {
     width: 1200px;
-    min-height: 417px;
+    min-height: 415px;
     background-color: #FFFFFF;
     text-align: center;
     margin: 0 auto;
